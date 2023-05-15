@@ -1,0 +1,231 @@
+html, body {
+  font-family: "Lato" ,sans-serif;
+  color: #424551
+}
+
+.wrapper{
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0.5px;
+  padding: 0 40px;
+  color: #ffffff;
+  border-radius: 4px;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  transition: 0.5s;
+}
+
+.button--empty {
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+  border-right: 2px solid #F75E05;
+  background-image: -webkit-linear-gradient(left, #FF3F3A, #F75E05), -webkit-linear-gradient(left, #FF3F3A, #F75E05);
+  background-image: linear-gradient(left, #FF3F3A, #F75E05), linear-gradient(left, #FF3F3A, #F75E05);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.button--empty span {
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button:hover {
+  /* background: #ffffff00;
+  color: #424551;
+  border:solid 1px #424551; */
+transform: scale(1.05);
+}
+
+.logo {
+}
+/* ----------------------------------------------------------------------------- */
+
+.header {
+  font-weight: 700;
+  background: url("../images/decor/shapes-bg.svg") 50% 50% / cover no-repeat ,linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+}
+.header__logo {
+  margin-right: 60px;
+}
+.header__nav {
+  margin-right: auto;
+}
+.header__nav-list {
+  display: flex;
+
+}
+.header__nav-item {
+  margin-right: 40px;
+}
+
+.header__nav-item:last-child{
+margin-right: 0px;
+}
+
+.header__nav-link {
+  transition: 0.5s;
+  line-height: 1.6;
+  color: #424551;
+  white-space: nowrap;
+}
+
+.header__nav-link:hover {
+  color: #FF3F3A;
+
+}
+
+.header__user-nav {
+
+}
+.header__btn-box {
+  display: flex;
+  align-items: center;
+}
+.header__top-btn {
+  margin-right: 36px;
+}
+
+.header__user {
+  white-space: nowrap;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 28px;
+}
+
+.header__user::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("../images/icons/user-icon.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.header__user-btn {
+  transition: all 0.5s;
+}
+.header__user-btn:hover {
+  color: #FF3F3A;
+}
+
+/* -------------------------------------======================================--- */
+
+.header__body {
+  flex-grow: 1;
+}
+
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E212C;
+  margin: auto 0;
+}
+.header__content {
+  margin-right: 30px;
+}
+.header__play {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+}
+
+.header__play svg {
+  margin-right: 16px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.header__play:hover svg {
+  box-shadow: 0 0 0 16px rgba(255, 63, 56, 0.12);
+}
+
+
+.header__title {
+  max-width: 500px;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+.header__content-buttons {
+  display: flex;
+  white-space: nowrap;
+}
+.header__content-btn {
+}
+
+.header__content-btn:last-child {
+  margin-left: 24px;
+}
+
+.button {
+}
+.header__img {
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E212C;
+  margin-bottom: 80px;
+}
+
+.header__row>span {
+  border-radius: 50%;
+  /* width: 8px; */
+  height: 8px;
+  min-width: 8px;
+  background: #FF3F3A;
+  margin: 0 15px;
+}
+
+.header__row-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.header__row-item span {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;  
+  margin-right: 12px;
+}
+
+.header__body-inner {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
