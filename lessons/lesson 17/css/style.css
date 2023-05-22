@@ -1,0 +1,24 @@
+/* ------------------lesson15---------------------- */
+
+p.text--bold {
+  color: #448f1b;
+}
+
+.parrent .child {
+  color: #ca6161;
+}
+
+[href="#blog"] {
+  color: rgb(61, 73, 146);
+}
+
+/* ------------------lesson16---------------------- */
+
+#block {
+  color: #c9eb36;
+  font-size: 22px;
+}
+
+/* [href] {
+  color: #c28d08;
+} */
