@@ -1,0 +1,22 @@
+.block {
+  font-size: 20px;
+}
+
+.title {
+  font-family: smokum, serif;
+  font-size: 3rem;
+  line-height: 200%;
+}
+
+.title2 {
+  font-family: "LobsterTwo", serif;
+  font-weight: 400;
+  line-height: 200%;
+}
+
+.title3 {
+  font-family: "LobsterTwo", serif;
+  font-weight: 700;
+  line-height: 200%;
+}
+
