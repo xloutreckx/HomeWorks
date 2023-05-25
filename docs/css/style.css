@@ -1,0 +1,15 @@
+.block {
+  width: 50vw;
+  height: 50vh;
+  background-image:  url("../logo.jpg"), radial-gradient(#8ee798 30%, #437ad8, #444);
+  background-color: #abaaaa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+}
+
+.block1 {
+  width: 50vw;
+  height: 50vh;
+  background: url("../logo.jpg") no-repeat center / 100px, radial-gradient(#8ee798 30%, #437ad8, #444);
+}
