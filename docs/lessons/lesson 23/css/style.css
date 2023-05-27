@@ -1,15 +1,13 @@
-/* .block {
-  width: 50vw;
-  height: 50vh;
+.block {
+  width: 80vw;
+  height: 70vh;
   background-image: url("../logo.jpg"), radial-gradient(#8ee798 30%, #437ad8, #444);
-  background-color: #abaaaa;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 200px;
-} */
+  background-position: center;
+}
 
-.block, .block1 {
-  width: 50vw;
-  height: 50vh;
-  background: url("../logo.jpg") no-repeat center / 100px, radial-gradient(#8ee798 30%, #437ad8, #444);
+.block1 {
+  width: 80vw;
+  height: 70vh;
+  background: url("../logo.jpg") no-repeat center, linear-gradient(#c5cf3e, #1e1e1e, #3c3c3c);
 }
