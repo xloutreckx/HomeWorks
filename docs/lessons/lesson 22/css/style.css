@@ -1,0 +1,9 @@
+.block-txt {
+  font-family: "LobsterTwo", serif;
+  background-color: #a4a4a4;
+  padding: 25px 25px 0px 25px;
+  width: 50vw;
+  /* height: 50vh; */
+  height: 100px;
+  overflow: auto;
+}

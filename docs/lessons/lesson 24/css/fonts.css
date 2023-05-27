@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "LobsterTwo";
+  src: local("../fonts/LobsterTwo-Regular"),
+    url("../fonts/LobsterTwo-Regular.woff2") format("woff2"),
+    url("../fonts/LobsterTwo-Regular.woff") format("woff"),
+    url("../fonts/LobsterTwo-Regular.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LobsterTwo";
+  src: local("../fonts/LobsterTwo-Bold"),
+    url("../fonts/LobsterTwo-Bold.woff2") format("woff2"),
+    url("../fonts/LobsterTwo-Bold.woff") format("woff"),
+    url("../fonts/LobsterTwo-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

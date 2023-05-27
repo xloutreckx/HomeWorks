@@ -1,0 +1,19 @@
+.parrent {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  margin: 100px auto;
+}
+
+.child1 {
+  width: 150px;
+  height: 150px;
+  background-color: #ee6464;
+  transform:  translateX(10vw) rotateZ(-30deg);
+}
+
+.child2 {
+  width: 150px;
+  height: 150px;
+  background-color: #6479ee;
+}
