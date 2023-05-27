@@ -34,10 +34,15 @@ body {
 .lesson-list__link {
   font-size: 2.5rem;
   font-weight: normal;
+  transition: color 0.3s;
 }
 
 li::marker {
   content: "#";
   color: #0831a1;
+}
+
+.lesson-list__link:hover {
+  color: aliceblue;
 }
 
