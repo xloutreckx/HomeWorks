@@ -1,0 +1,12 @@
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+.title-list {
+  margin-top: 15px;
+}
