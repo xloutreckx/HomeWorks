@@ -1,9 +1,43 @@
-.block {
-  background-color: #262626;
-  height: 100px;
-  border-radius: 25px;
-  position: fixed;
-  right: 50px;
-  bottom: 100px;
-  left: 50vw;
+body {
+  font-family: "LobsterTwo", serif;
+  font-weight: bold;
 }
+
+.header {
+  margin: 30px;
+  padding: 25px;
+  text-align: center;
+  font-size: 5em;
+  border-bottom: 1px solid #000;
+}
+
+.block-hw {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.conteiner {
+  background-image: linear-gradient(#b5c9fe,#b0b0b0);
+  border-radius: 25px;
+  box-shadow: 0px 0px 8px 0px #000;
+}
+
+.lesson-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lesson-list li {
+  margin: 20px 30px;
+}
+
+.lesson-list__link {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+li::marker {
+  content: "#";
+  color: #0831a1;
+}
+
