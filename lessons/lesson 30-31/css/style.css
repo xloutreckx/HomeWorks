@@ -1,0 +1,51 @@
+.wrapper {
+  width: 50%;
+  border: solid 2px #000;
+  margin: 30px auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title, .menu__item {
+  text-align: center;
+  margin: 25px;
+  font-weight: 700;
+}
+.title {
+  position: relative;
+  font-size: 3rem;
+  border-bottom: 1px solid #000;
+}
+
+.title::before, .title::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%
+}
+.title::before {
+  left: 10px;
+  background-color: #2b1c9e;
+}
+
+.title::after {
+  right: 10px;
+  background-color: #c92121;
+}
+
+.menu__item {
+  font-size: 2rem;
+  transition: color .3s;
+}
+.menu__item:nth-child(2):hover {
+  color: red;
+}
+
+
+
