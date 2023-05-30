@@ -1,0 +1,121 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #424551;
+  font-weight: 700;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  width: 206px;
+  height: 52px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 52px;
+  padding: 0 40px;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.logo {}
+
+/* ----------------------<<<Header>>>--------------------------- */
+
+.header {
+  /* width: 100vw;
+  height: 100vh;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  opacity: 0.2; */
+}
+
+.header__top {}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.header__logo {
+  margin-right: 60px;
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item {
+  line-height: 1.6;
+  margin-right: 40px;
+  transition: color .3s;
+}
+
+.header__nav-item:hover {
+  color: #FF3F3A;
+}
+
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header__link-nav {}
+
+.header__user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__top-btn {
+  margin-right: 36px;
+}
+
+.button {}
+
+.header__btn-box {
+  position: relative;
+  padding-left: 28px;
+  
+}
+
+.header__btn-box::before {
+content: "";
+top: -2px;
+left: 0;
+width: 20px;
+height: 20px;
+position: absolute;
+background: url("../images/icon/img-login.svg") no-repeat;
+display: block;
+}
+
+.header__btn {
+  transition: color .3s;
+}
+
+.header__btn:hover {
+  color: #FF3F3A;
+}
+
+.header__body {}
