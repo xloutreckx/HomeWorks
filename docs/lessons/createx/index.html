@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -55,7 +56,7 @@
           <div class="header__body-inner">
             <div class="header__main">
               <div class="header__content">
-                <a class="header__play">
+                <a class="header__play" href="https://youtu.be/UIKyAKC0ab8" data-fancybox>
                   <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="26" cy="26" r="26" fill="#FF3F3A" />
                     <path
@@ -64,18 +65,38 @@
                   </svg>
                   Play showreel
                 </a>
-              </div>
-              <h1 class="header__title">
-                Enjoy studying
-                with Createx Online Courses
-              </h1>
-              <div class="header__content-buttons">
-                <div class="header__content-btn">About us</div>
-                <div class="header__content-btn button">Explore courses</div>
+                <h1 class="header__title">
+                  Enjoy studying
+                  with Createx Online Courses
+                </h1>
+                <div class="header__content-buttons">
+                  <a class="header__content-btn button button--empty" href="#"><span>About us</span></a>
+                  <a class="header__content-btn button" href="#">Explore courses</a>
+                </div>
               </div>
               <img class="header__image" src="images/image/illustration-girl-header.svg" alt="">
             </div>
-            <div class="header__row"></div>
+            <ul class="header__row">
+              <li class="header__row-item">
+                <span>1200</span>
+                Students graduated
+              </li>
+              <li><span class="header__row-point"></span></li>
+              <li class="header__row-item">
+                <span>84</span>
+                Completed courses
+              </li>
+              <li><span class="header__row-point"></span></li>
+              <li class="header__row-item">
+                <span>16</span>
+                Qualified tutors
+              </li>
+              <li><span class="header__row-point"></span></li>
+              <li class="header__row-item">
+                <span>5</span>
+                Years of experience
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -83,6 +104,8 @@
   </div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="js/main.js"></script>
 
 </html>
