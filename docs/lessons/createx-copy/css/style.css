@@ -1,0 +1,239 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #424551;
+  font-weight: 700;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  color: #fff;
+  font-weight: 700;
+  line-height: 52px;
+  padding: 0 40px;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all .3s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.logo {
+
+}
+
+/* ----------------------<<<Header-top>>>--------------------------- */
+
+.header {
+  height: 100vh;
+  background: url("../images/decor/shapes-bg.svg") 50% 50% / cover no-repeat, linear-gradient(55.95deg, rgba(255, 63, 58, .2) 0%, rgba(247, 94, 5, .2) 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.header__top {}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.header__logo {
+  margin-right: 60px;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item {
+  line-height: 1.6;
+  margin-right: 40px;
+  transition: color .3s;
+}
+
+.header__nav-item:hover {
+  color: #FF3F3A;
+}
+
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header__link-nav {}
+
+.header__user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__top-btn {
+  margin-right: 36px;
+}
+
+.button {}
+
+.header__btn-box {
+  position: relative;
+  padding-left: 28px;
+
+}
+
+.header__btn-box::before {
+  content: "";
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url("../images/icon/img-login.svg") no-repeat;
+  display: block;
+}
+
+.header__btn {
+  transition: color .3s;
+}
+
+.header__btn:hover {
+  color: #FF3F3A;
+}
+
+/* --------------------------<<<Header-body>>>--------------------------- */
+
+.header__body {
+}
+
+.header__body-inner {
+  min-width: 100%;
+  height: 80vh;
+  display: inline-grid;
+  grid-template: auto auto / 500px auto;
+  grid-template-areas: 
+  "content image"
+  "row row";
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__main {
+}
+
+.header__content, .header__row {
+  color: #1E212C;
+}
+
+.header__content {
+  grid-area: content;
+}
+.header__image {
+  grid-area: image;
+}
+
+.header__play {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.header__play svg {
+  border-radius: 50%;
+  margin-right: 16px;
+  transition: all .3s;
+}
+
+.header__play:hover svg {
+  box-shadow: 0 0 0 16px rgba(255, 63, 58, 0.12);
+}
+
+.header__title {
+  margin-bottom: 60px;
+  max-width: 500px;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 1px;
+}
+
+.button--empty {
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+    border-right: 2px solid #F75E05;
+    background-image: linear-gradient(to left, #F75E05, #FF3F3A), linear-gradient(to left, #F75E05, #FF3F3A);
+    background-size: 100% 2px;
+    background-position: 0 100%, 0 0;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.button--empty span {
+  background: linear-gradient(to left, #FF3F3A, #F75E05);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.header__content-buttons {
+  display: inline-flex;
+}
+
+.header__content-btn {
+  margin-right: 24px;
+}
+
+.header__content-btn:last-child {
+  margin-right: none;
+}
+
+.header__row {
+  grid-area: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__row-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.header__row-point {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 15px;
+  border-radius: 50%;
+  background: #FF3F3A;
+}
+
+.header__row-item>span {
+  margin-right: 12px;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+}
