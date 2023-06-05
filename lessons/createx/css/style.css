@@ -53,6 +53,10 @@ body {
   color: #1E212C;
 }
 
+.heading--text-center {
+  text-align: center;
+}
+
 .logo {}
 
 /* ----------------------<<<Header-top>>>--------------------------- */
@@ -368,17 +372,38 @@ body {
 
 /* --------------------------<<<Main-Directions>>>--------------------------- */
 
-.directions {}
+.directions {
+  padding-bottom: 180px;
+}
 
-.direction__inner {}
+.direction__inner {
+  position: relative;
+}
+.direction__inner::before {
+  content: "";
+  top: 20px;
+  left: -200px;
+  position: absolute;
+  display: block;
+  width: 136px;
+  height: 115px;
+  background: url("../images/decor/group-shape.svg");
+}
+.direction__inner::after {
+  content: "";
+  top: 390px;
+  right: -390px;
+  position: absolute;
+  display: block;
+  width: 242px;
+  height: 242px;
+  background: url("../images/decor/circles.svg");
+}
 
 .direction__heading {
   margin-bottom: 90px;
 }
 
-.direction__heading--center {
-  text-align: center;
-}
 
 .direction__main {}
 
@@ -413,6 +438,7 @@ body {
   font-size: 16px;
   padding: 6px 8px;
   line-height: 1;
+  border: 1px solid #FF3F3A;
 }
 
 .direction__items {
@@ -492,15 +518,25 @@ body {
   background-image: url("../images/icon/right-arrow.svg");
 }
 
-.direction__list-item--marketing {}
+.direction__list-item--marketing .direction__list-tag {
+  background-color: #03CEA4;
+}
 
-.direction__list-item--managment {}
+.direction__list-item--managment .direction__list-tag {
+  background-color: #5A87FC;
+}
 
-.direction__list-item--hr {}
+.direction__list-item--hr .direction__list-tag {
+  background-color: #F89828;
+}
 
-.direction__list-item--design {}
+.direction__list-item--design .direction__list-tag {
+  background-color: #F52F6E;
+}
 
-.direction__list-item--development {}
+.direction__list-item--development .direction__list-tag {
+  background-color: #7772F1;
+}
 
 .direction__list--empty {
   display: flex;
@@ -517,5 +553,5 @@ body {
   line-height: 150%;
   text-align: center;
   color: #424551;
-  width: 240px;
+  max-width: 240px;
 }
