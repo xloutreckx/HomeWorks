@@ -18,16 +18,9 @@
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <a class="header__top-btn button" href="#">Get consultation</a>
             <a class="header__logo logo" href="#">
-              <img src="images/logos/logo-createx.svg" alt="logo"></a>
-            <div class="header__user-nav">
-              <div class="header__btn-box">
-                <a class="header__btn" href="#">Log in</a>
-                /
-                <a class="header__btn" href="#">Register</a>
-              </div>
-            </div>
+              <img src="images/logos/logo-createx.svg" alt="logo">
+            </a>
             <nav class="header__nav">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
@@ -47,33 +40,43 @@
                 </li>
               </ul>
             </nav>
+            <div class="header__user-nav">
+              <a class="header__top-btn button" href="#">Get consultation</a>
+              <div class="header__btn-box">
+                <a class="header__btn" href="#">Log in</a>
+                /
+                <a class="header__btn" href="#">Register</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="header__body">
         <div class="container">
           <div class="header__body-inner">
-            <div class="header__content">
-              <a class="header__play" href="https://youtu.be/UIKyAKC0ab8" data-width="800" data-height="500"
-                data-fancybox>
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="26" cy="26" r="26" fill="#FF3F3A" />
-                  <path
-                    d="M32.5 25.134C33.1667 25.5189 33.1667 26.4811 32.5 26.866L23.5 32.0622C22.8333 32.4471 22 31.966 22 31.1962L22 20.8038C22 20.034 22.8333 19.5529 23.5 19.9378L32.5 25.134Z"
-                    fill="white" />
-                </svg>
-                Play showreel
-              </a>
-              <h1 class="header__title">
-                Enjoy studying
-                with Createx Online Courses
-              </h1>
-              <div class="header__content-buttons">
-                <a class="header__content-btn button button--empty" href="#"><span>About us</span></a>
-                <a class="header__content-btn button" href="#">Explore courses</a>
+            <div class="header__main">
+              <div class="header__content">
+                <a class="header__play" href="https://youtu.be/UIKyAKC0ab8" data-width="800" data-height="500"
+                  data-fancybox>
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="26" cy="26" r="26" fill="#FF3F3A" />
+                    <path
+                      d="M32.5 25.134C33.1667 25.5189 33.1667 26.4811 32.5 26.866L23.5 32.0622C22.8333 32.4471 22 31.966 22 31.1962L22 20.8038C22 20.034 22.8333 19.5529 23.5 19.9378L32.5 25.134Z"
+                      fill="white" />
+                  </svg>
+                  Play showreel
+                </a>
+                <h1 class="header__title">
+                  Enjoy studying
+                  with Createx Online Courses
+                </h1>
+                <div class="header__content-buttons">
+                  <a class="header__content-btn button button--empty" href="#"><span>About us</span></a>
+                  <a class="header__content-btn button" href="#">Explore courses</a>
+                </div>
               </div>
+              <img class="header__image" src="images/image/illustration-girl-header.svg" alt="">
             </div>
-            <img class="header__image" src="images/image/illustration-girl-header.svg" alt="">
             <ul class="header__row">
               <li class="header__row-item">
                 <span>1200</span>
@@ -100,7 +103,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="about">
+      <section class="main__about about">
         <div class="container">
           <div class="about__inner">
             <div class="about__createx">
@@ -152,7 +155,7 @@
           </div>
         </div>
       </section>
-      <section class="directions">
+      <section class="main__directions directions">
         <div class="container">
           <div class="direction__inner">
             <div class="direction__heading heading--text-center heading">
@@ -162,28 +165,22 @@
             <div class="direction__main">
               <ul class="direction__filter-box">
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn direction__filter-btn--active" type="button"
-                    data-filter="all">All</button>
+                  <button class="direction__filter-btn direction__filter-btn--active" type="button" data-filter="all">All</button>
                 </li>
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn" type="button"
-                    data-filter=".direction__list-item--marketing">Marketing</button>
+                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--marketing">Marketing</button>
                 </li>
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn" type="button"
-                    data-filter=".direction__list-item--managment">Management</button>
+                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--managment">Management</button>
                 </li>
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--hr">HR &
-                    Recruting</button>
+                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--hr">HR & Recruting</button>
                 </li>
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn" type="button"
-                    data-filter=".direction__list-item--design">Design</button>
+                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--design">Design</button>
                 </li>
                 <li class="direction__filter-item">
-                  <button class="direction__filter-btn" type="button"
-                    data-filter=".direction__list-item--development">Development</button>
+                  <button class="direction__filter-btn" type="button" data-filter=".direction__list-item--development">Development</button>
                 </li>
               </ul>
               <ul class="direction__items">
@@ -256,6 +253,33 @@
                   <span>New studying program coming soon...</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__cert cert">
+        <div class="container">
+          <div class="cert__inner">
+            <div class="cert__content">
+              <div class="cert__heading heading">
+                <div class="heading__subtitle">Createx Certificate</div>
+                <h2 class="heading__title">Your expertise will be confirmed</h2>
+              </div>
+              <p class="cert__text">We are accredited by international professional organizations and institutes:</p>
+              <ul class="cert__logos">
+                <li class="cert__item">
+                  <img src="images/icon/logo-comp1.png" alt="">
+                </li>
+                <li class="cert__item">
+                  <img src="images/icon/logo-comp2.png" alt="">
+                </li>
+                <li class="cert__item">
+                  <img src="images/icon/logo-comp3.png" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="cert__image-box">
+              <img src="images/image/award.jpg" alt="Сертификат">
             </div>
           </div>
         </div>
