@@ -3,11 +3,17 @@ $(function () {
   var mixer = mixitup('.direction__items');
 
   $('.direction__filter-btn').on('click', function () {
-  $('.direction__filter-btn').removeClass('direction__filter-btn--active')
-  $(this).addClass('direction__filter-btn--active')
+    $('.direction__filter-btn').removeClass('direction__filter-btn--active')
+    $(this).addClass('direction__filter-btn--active')
   })
 
+  $('.team__slider').slick({
+    infinite: true,
+    arrow: false,
+    slidesToShow: 4,
+  });
 })
+
 
 Fancybox.bind("[data-fancybox]", {
   src: "https://youtu.be/UIKyAKC0ab8",
