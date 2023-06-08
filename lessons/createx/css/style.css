@@ -632,15 +632,65 @@ body {
 /* --------------------------<<<Main-Team>>>--------------------------- */
 
 .main__team {
-  margin-top: 170px;
+  padding: 170px 0 180px;
 }
 
-.team {}
+.team {
+  background-color: #F4F5F7;
+}
 
 .team__inner {}
 
 .team__heading {
   margin-bottom: 60px;
+  position: relative;
+}
+
+.team__slider-arrows {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.team__slider-arrow {
+display: block;
+line-height: 0;
+border-radius: 50%;
+position: relative;
+transition: all .3s;
+}
+
+.team__slider-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 48px;
+  height: 48px;
+  background-color: #FF3F3A;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all .5s;
+}
+
+.team__slider-arrow:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.team__slider-arrow path {
+  transition: all .3s;
+}
+
+.team__slider-arrow:hover path {
+fill: #fff;
+}
+
+.team__slider-prev {
+  margin-right: 24px;
+}
+.team__slider-next {
 }
 
 .team__slider {}
@@ -656,7 +706,10 @@ body {
 .team__image-box {
   border-radius: 4px;
   margin-bottom: 16px;
+  overflow: hidden;
+  position: relative;
 }
+
 .team__image {
   position: relative;
   height: 340px;
@@ -671,10 +724,40 @@ body {
   object-fit: cover;
 }
 
+.team__socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+  transform: translateY(50%);
+  transition: all .3s;
+}
 
-.team__socials {}
+.team__socials:hover {
+  transform: translateY(0);
 
-.team__social-item {}
+}
+.team__social-item {
+  display: block;
+  line-height: 0;
+  margin-right: 12px;
+}
+.team__social-item:hover path {
+  fill: #fff;
+}
+.team__social-item path {
+  transition: all .5s;
+}
+
+.team__social-item:last-child {
+  margin-right: 0;
+}
 
 .team__info {
   text-align: center;
