@@ -636,7 +636,7 @@ body {
 }
 
 .team {
-  background: #F4F5F7;
+  background-color: #F4F5F7;
 }
 
 .team__inner {}
@@ -651,6 +651,7 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 0;
 }
 
 .team__slider-arrow {
