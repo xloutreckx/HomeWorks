@@ -943,6 +943,10 @@ body {
   transform: translate(-150%, 0%);
 }
 
+.testimonials__dots {
+  margin-top: 50px;
+}
+
 .testimonials__dots .slick-dots {
   display: flex;
   justify-content: center;
