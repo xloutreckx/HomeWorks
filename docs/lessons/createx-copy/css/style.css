@@ -1024,7 +1024,7 @@ fill: #fff;
   flex-wrap: wrap;
 }
 .companies__flex-item {
-  filter: invert(60%) blur(1px);
+  filter: invert(60%) blur(1px) drop-shadow(3px 3px 10px rgb(0, 0, 0));;
   transition: all 10s;
   padding: 0 102px 40px 0;
 }
