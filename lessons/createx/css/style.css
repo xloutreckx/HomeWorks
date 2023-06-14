@@ -37,6 +37,10 @@ body {
   padding-bottom: 195px;
 }
 
+.main__companies {
+  padding-bottom: 177px;
+}
+
 .button {
   display: inline-block;
   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
@@ -980,4 +984,36 @@ body {
 .testimonials__dots .slick-active button::before {
   background-color: #424551;
   transition: all .5s;
+}
+
+/* --------------------------<<<Main-Companies>>>--------------------------- */
+/* --------------------------<<<Main-Companies>>>--------------------------- */
+/* --------------------------<<<Main-Companies>>>--------------------------- */
+
+
+.companies {
+  background: #F4F5F7;
+}
+.companies__inner {
+}
+
+.companies__heading {
+  margin-bottom: 60px;
+}
+.companies__grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(6, 1fr);
+  gap: 40px 102px;
+}
+.companies__grid-item {
+  filter: opacity(40%) invert(60%);
+  transition: all 10s;
+}
+.companies__grid-item:hover {
+  filter: opacity(100%) invert(0%);
+  transition: all .5s;
+}
+
+.companies__grid-link {
+  display: block;
 }
