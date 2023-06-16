@@ -41,6 +41,10 @@ body {
   padding-bottom: 177px;
 }
 
+.main__program {
+  padding: 115px 0 185px;
+}
+
 .button {
   display: inline-block;
   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
@@ -646,7 +650,7 @@ body {
 
 
 .team {
-  background: url(../images/decor/shapes-team-bg.svg) 90% 15% no-repeat #F4F5F7;
+  background: url("../images/decor/shapes-team-bg.svg") 90% 15% no-repeat #F4F5F7;
 }
 
 .team__inner {}
@@ -973,6 +977,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .testimonials__dots button::before {
   content: "";
   height: 3px;
@@ -993,22 +998,37 @@ body {
 
 .companies {
   background: #F4F5F7;
+  position: relative;
 }
-.companies__inner {
+
+.companies::before {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  transform: translate(-180%, 20%);
+  background: url("../images/decor/comp-shapes.svg");
+  width: 90px;
+  height: 90px;
 }
+
+.companies__inner {}
 
 .companies__heading {
   margin-bottom: 60px;
 }
+
 .companies__grid {
   display: grid;
   grid-template: repeat(2, auto) / repeat(6, 1fr);
   gap: 40px 102px;
 }
+
 .companies__grid-item {
   filter: opacity(40%) invert(60%);
   transition: all 10s;
 }
+
 .companies__grid-item:hover {
   filter: opacity(100%) invert(0%);
   transition: all .5s;
@@ -1017,3 +1037,77 @@ body {
 .companies__grid-link {
   display: block;
 }
+
+/* --------------------------<<<Main-Program>>>--------------------------- */
+/* --------------------------<<<Main-Program>>>--------------------------- */
+/* --------------------------<<<Main-Program>>>--------------------------- */
+
+
+.program {}
+
+.program__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.program__content {
+  max-width: 600px;
+  margin-right: 30px;
+}
+
+.program__heading {
+  margin-bottom: 60px;
+}
+
+.program__acc {}
+
+.program__acc-item {
+  margin-bottom: 24px;
+}
+
+.program__acc-link {
+  padding-left: 40px;
+  display: block;
+}
+
+.program__acc-head {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  position: relative;
+}
+
+.program__acc-head span {
+  color: #FF3F3A;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+.program__acc-head::before, .program__acc-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FF3F3A;
+}
+
+.program__acc-head::after {
+  transform: rotate(90deg);
+  transition: all .3s;
+}
+
+.program__acc-link--active .program__acc-head::after {
+  transform: rotate(0);
+}
+
+
+.program__acc-text {
+  margin-top: 16px;
+  font-weight: 400;
+  color: #424551;
+}
+
+.program__image {}
