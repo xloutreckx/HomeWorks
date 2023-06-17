@@ -55,7 +55,7 @@ $(function () {
 //     $('.program__acc-link').removeClass('program__acc-link--active')
 //     $('.program__acc-text').slideUp()
 //     $(this).addClass('program__acc-link--active')
-//     $(this).children('.program__acc-text').slideDowm()
+//     $(this).children('.program__acc-text').slideDown()
 //   }
 // })
 
