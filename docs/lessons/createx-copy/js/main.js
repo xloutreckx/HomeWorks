@@ -81,4 +81,12 @@ Fancybox.bind("[data-fancybox]", {
   type: "video",
 });
 
+function init() {
+  let map = new ymaps.Map('map-test', {
+    center: [48.481694563291576,135.0791485844116],
+    zoom: 15
+  });
+}
+
+ymaps.ready(init);
 
