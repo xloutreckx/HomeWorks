@@ -21,7 +21,7 @@ body {
   padding: 180px 0 160px;
 }
 
-.main__directions {
+.main__direction {
   padding-bottom: 180px;
 }
 
@@ -50,7 +50,11 @@ body {
 }
 
 .main__info {
-  padding: 180px;
+  padding-bottom: 180px;
+}
+
+.main__questions {
+  padding-bottom: 180px;
 }
 
 .button {
@@ -410,11 +414,11 @@ body {
   margin-bottom: 0;
 }
 
-/* --------------------------<<<Main-Directions>>>--------------------------- */
-/* --------------------------<<<Main-Directions>>>--------------------------- */
-/* --------------------------<<<Main-Directions>>>--------------------------- */
+/* --------------------------<<<Main-direction>>>--------------------------- */
+/* --------------------------<<<Main-direction>>>--------------------------- */
+/* --------------------------<<<Main-direction>>>--------------------------- */
 
-.directions {}
+.direction {}
 
 .direction__inner {
   position: relative;
@@ -1302,9 +1306,9 @@ body {
   background: url("../images/icon/right-arrow-red.svg") 0 0 / 100% no-repeat;
 }
 
-/* --------------------------<<<Main-Contact>>>--------------------------- */
-/* --------------------------<<<Main-Contact>>>--------------------------- */
-/* --------------------------<<<Main-Contact>>>--------------------------- */
+/* --------------------------<<<Main-Info>>>--------------------------- */
+/* --------------------------<<<Main-Info>>>--------------------------- */
+/* --------------------------<<<Main-Info>>>--------------------------- */
 
 
 .info {}
@@ -1362,15 +1366,15 @@ body {
 
 }
 
-.item--email .info__cont-head::before {
+.item__email .info__cont-head::before {
   background: url("../images/icon/chat.svg");
 }
 
-.item--tel .info__cont-head::before {
+.item__tel .info__cont-head::before {
   background: url("../images/icon/iphone.svg");
 }
 
-.item--address .info__cont-head::before {
+.item__address .info__cont-head::before {
   background: url("../images/icon/outline.svg");
 }
 
@@ -1403,6 +1407,7 @@ body {
 .info__socials-link {
   display: block;
 }
+
 .info__socials-link path {
   transition: all .5s;
 }
@@ -1410,8 +1415,9 @@ body {
 .info__socials-link:hover path {
   fill: #022bc2;
 }
-.social--yt .info__socials-link:hover path {
-  fill: #c20202;
+
+.social__yt .info__socials-link:hover path {
+  fill: #ed1111;
 }
 
 .info__map {
@@ -1419,6 +1425,119 @@ body {
   max-width: 702px;
   height: 400px;
 }
+
 .info__map iframe {
   border-radius: 4px;
+}
+
+
+/* --------------------------<<<Main-Questions>>>--------------------------- */
+/* --------------------------<<<Main-Questions>>>--------------------------- */
+/* --------------------------<<<Main-Questions>>>--------------------------- */
+
+
+.questions {}
+
+.questions__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questions__image {}
+
+.questions__content {
+  margin-left: 30px;
+}
+
+.questions__heading {
+  margin-bottom: 40px;
+}
+
+.questions__form {}
+
+.questions__form-row {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.questions__form-row:last-child {
+  margin-bottom: 0;
+}
+
+.questions__input-label {
+  margin-right: 25px;
+  flex: 1 1 auto;
+}
+
+.questions__input-label:last-child {
+  margin-right: 0;
+}
+
+.questions__text-label {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.questions__form-input, .questions__form-text {
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  padding: 13px 16px;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.questions__form-input::placeholder, .questions__form-text::placeholder {
+  color: #9A9CA5;
+  ;
+}
+
+.questions__form-text {
+  resize: none;
+  height: 128px;
+}
+
+.questions__checkbox-label {
+  display: flex;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.questions__form-checkbox {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  margin: 5px 12px 0 0 ;
+}
+
+.questions__form-default {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.questions__form-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #424551;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.questions__form-default:checked + .questions__form-custom {
+  background: url("../images/icon/check.svg") 50% 50% no-repeat, #FF3F3A;
+  border: 1px solid #FF3F3A;
+}
+
+.questions__form-btn {
+  text-align: center;
+  align-self: center;
+  font-size: 16px;
+  width: 100%;
 }
