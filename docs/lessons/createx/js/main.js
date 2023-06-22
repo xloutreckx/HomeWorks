@@ -41,27 +41,39 @@ $(function () {
     $('.testimonials__slider').slick('slickNext')
   })
 
-$('.program__acc-link').on('click', function (e) {
-  e.preventDefault()
-  if ($(this).hasClass('program__acc-link--active')) {
-    $(this).removeClass('program__acc-link--active')
-    $(this).children('.program__acc-text').slideUp()
-  } else {
-    $('.program__acc-link').removeClass('program__acc-link--active')
-    $('.program__acc-text').slideUp()
-    $(this).addClass('program__acc-link--active')
-    $(this).children('.program__acc-text').slideDown()
-  }
-})
+  $('.program__acc-link').on('click', function (e) {
+    e.preventDefault()
+    if ($(this).hasClass('program__acc-link--active')) {
+      $(this).removeClass('program__acc-link--active')
+      $(this).children('.program__acc-text').slideUp()
+    } else {
+      $('.program__acc-link').removeClass('program__acc-link--active')
+      $('.program__acc-text').slideUp()
+      $(this).addClass('program__acc-link--active')
+      $(this).children('.program__acc-text').slideDown()
+    }
+  })
 
-$(".header__nav-list a, .header__top-btn, .header__content-btn, .footer__go-top, .footer__body-list a, .footer__logo").on("click", function (e) {
-          e.preventDefault()
-          var id  = $(this).attr('href'),
-              top = $(id).offset().top
-          $('body,html').animate({scrollTop: top}, 1500)
-      })
-  
+  $(".header__nav-list a, .header__top-btn, .header__content-btn, .footer__go-top, .footer__body-list a, .footer__logo, .header__logo").on("click", function (e) {
+    e.preventDefault()
+    var id = $(this).attr('href'),
+      top = $(id).offset().top
+    $('body,html').animate({ scrollTop: top }, 1500)
+  })
 
+  setInterval(() => {
+    if ($(window).scrollTop() > 0 && $('.header__top').hasClass('header__top--open') === false) {
+      $('.burger').addClass('burger--follow')
+    } else {
+      $('.burger').removeClass('burger--follow')
+    }
+  }, 0)
+  $('.burger, .overlay').on('click', function (e) {
+    e.preventDefault()
+    $('.header__top').toggleClass('header__top--open')
+    $('.overlay').toggleClass('overlay--show')
+    $('.burger').toggleClass('burger--active');
+  })
 })
 
 
