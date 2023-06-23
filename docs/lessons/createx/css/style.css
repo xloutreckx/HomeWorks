@@ -415,6 +415,7 @@ body {
 .about__numbers {
   align-self: center;
   margin-left: 30px;
+  white-space: nowrap;
 }
 
 .about__numbers span {
@@ -1753,7 +1754,26 @@ body {
 /* --------------------------<<<MEDIA>>>--------------------------- */
 /* --------------------------<<<MEDIA>>>--------------------------- */
 /* --------------------------<<<MEDIA>>>--------------------------- */
+/* --------------------------<<<1200>>>--------------------------- */
+@media (max-width: 1200px) {
+  .header__title {
+    max-width: 400px;
+    font-size: 50px;
+  }
 
+  .header__image {
+    max-width: 500px;
+  }
+  /* ========================================== */
+  .about__content {
+    max-width: 500px;
+  }
+  .heading__title {
+    font-size: 40px;
+  }
+}
+
+/* --------------------------<<<1100>>>--------------------------- */
 @media (max-width: 1100px) {
   .burger {
     display: flex;
@@ -1802,10 +1822,11 @@ body {
     transform: rotate(45deg);
     top: 30px;
   }
+
   .burger--active::after {
     position: absolute;
     transform: rotate(-45deg);
-    bottom : 26px;
+    bottom: 26px;
   }
 
   .burger--active span {
@@ -1878,11 +1899,208 @@ body {
   .header__btn-box {
     margin-bottom: 20px;
   }
+
+  /* =================================================== */
+  .header__image {
+    max-width: 450px;
+  }
+
+  .header__row {
+    display: none;
+  }
+
+  /* =================================================== */
+  .about__content {
+    max-width: 440px;
+  }
+
+  .heading__title {
+    font-size: 35px;
+  }
+
+  .about__text {
+    font-size: inherit;
+  }
+
+  .about__image {
+    max-width: 420px;
+  }
+
+  .about__values {
+    flex-direction: column;
+  }
+
+  .about__image-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .about__image-numbers {
+    max-width: 850px;
+  }
 }
 
+/* --------------------------<<<950>>>--------------------------- */
+@media (max-width: 950px) {
+  .header__body-inner {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .header__body-inner::before {
+    content: url("../images/image/illustration-girl-header.svg");
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    opacity: .12;
+  }
+
+  .header__main {
+    margin: 0 auto;
+  }
+
+  .header__content {
+    margin: 0;
+  }
+
+  .header__image {
+    display: none;
+  }
+/* ================================================= */
+
+.about__createx {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.about__createx::before {
+  content: url("../images/image/illustration-body.svg");
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  opacity: .12;
+}
+
+.about__content {
+  margin: 0;
+}
+
+.about__image {
+  display: none;
+}
+.about__image-numbers {
+  display: none;
+}
+
+.about__values {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.about__values::before {
+  content: url("../images/image/image.jpg");
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -85px;
+  opacity: .12;
+}
+}
+/* --------------------------<<<550>>>--------------------------- */
+@media (max-width:550px) {
+.about__createx {
+  margin-bottom: 60px;
+}
+
+  .about__heading {
+    margin-bottom: 30px;
+  }
+  .heading__subtitle {
+    font-size: 12px;
+    margin: 0;
+  }
+  .heading__title {
+    font-size: 30px;
+  }
+
+  .about__text {
+    max-width: 370px;
+    margin-bottom: 30px;
+  }
+
+  .about__paragraph {
+    font-size: inherit;
+  }
+
+  .about__btn-box {
+    flex-direction: column;
+    width: 90%;
+    min-width: 250px;
+  }
+
+  .about__btn {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+  .about__btn:last-child {
+    margin-right: auto;
+  }
+
+  .about__number span {
+    font-size: 40px;
+  }
+}
+/* --------------------------<<<426>>>--------------------------- */
 @media (max-width:426px) {
   .header__top {
     min-width: none;
     left: 0;
+  }
+
+  /* ================================ */
+  .header__body-inner::before {
+    content: "";
+  }
+
+  .header__content {
+    margin: 0;
+  }
+
+  .header__title {
+    font-size: 40px;
+  }
+
+  .header__content-buttons {
+    width: 90%;
+    min-width: 250px;
+    flex-direction: column;
+  }
+
+  .header__content-btn {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  .header__content-btn:last-child {
+    margin-right: auto;
+  }
+  /* =========================================== */
+  .about__createx::before {
+    content: "";
+  }
+
+  .about__values::before {
+    content: "";
   }
 }
