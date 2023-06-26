@@ -13,6 +13,31 @@ $(function () {
     infinite: true,
     draggable: false,
     waitForAnimate: false,
+    appendDots: $('.team__dots'),
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          draggable: true,
+          dots: true,
+        }
+      }
+    ]
   })
   $('.team__slider-prev').on('click', function (e) {
     e.preventDefault()
