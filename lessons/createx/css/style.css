@@ -127,6 +127,7 @@ body {
 
 .header {
   height: 100vh;
+  min-height: 600px;
   background: url("../images/decor/shapes-bg.svg") 50% 50% / cover no-repeat, linear-gradient(55.95deg, rgba(255, 63, 58, .2) 0%, rgba(247, 94, 5, .2) 100%);
   display: flex;
   flex-direction: column;
@@ -909,7 +910,7 @@ body {
   left: 0;
   width: 28px;
   height: 20px;
-  background-image: url("../images/decor/braces.svg");
+  background: url("../images/decor/braces.svg") 0 0 / 100% no-repeat;
 }
 
 .testimonials__user-info {
@@ -981,7 +982,7 @@ body {
 
 
 .testimonials__prev {
-  left: 0;
+  left: 25px;
 }
 
 .testimonials__prev svg {
@@ -989,7 +990,7 @@ body {
 }
 
 .testimonials__next {
-  right: 0;
+  right: -25px;
   justify-content: flex-end;
 }
 
@@ -997,9 +998,9 @@ body {
   transform: translate(-150%, 0%);
 }
 
-.testimonials__dots {
+/* .testimonials__dots {
   margin-top: 50px;
-}
+} */
 
 .testimonials__dots .slick-dots {
   display: flex;
@@ -1067,11 +1068,13 @@ body {
 .companies__grid {
   display: grid;
   grid-template: repeat(2, auto) / repeat(6, 1fr);
-  gap: 40px 102px;
+  gap: 40px 5%;
 }
 
 .companies__grid-item {
   filter: opacity(40%) invert(60%);
+  display: block;
+  text-align: center;
   transition: all 10s;
 }
 
@@ -1122,6 +1125,7 @@ body {
   font-size: 20px;
   line-height: 150%;
   position: relative;
+  white-space: nowrap;
 }
 
 .program__acc-head span {
@@ -1157,7 +1161,10 @@ body {
   color: #424551;
 }
 
-.program__image {}
+.program__image img {
+  width: 100%;
+  height: 100%;
+}
 
 
 /* --------------------------<<<Main-Blog>>>--------------------------- */
@@ -1791,6 +1798,10 @@ body {
 
 /* --------------------------<<<1100>>>--------------------------- */
 @media (max-width: 1100px) {
+  .header {
+    padding-top: 92px;
+  }
+
   .burger {
     display: flex;
     top: 0;
@@ -1848,10 +1859,6 @@ body {
     display: none;
   }
 
-  .header {
-    padding-top: 92px;
-  }
-
   .header__top {
     position: fixed;
     top: 0;
@@ -1874,6 +1881,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 100px 0;
+    overflow: auto;
   }
 
   .header__logo,
@@ -1881,10 +1889,6 @@ body {
   .header__top-btn,
   .header__btn-box {
     margin: 0;
-  }
-
-  .header__logo {
-    margin-bottom: 30px;
   }
 
   .header__nav {
@@ -1898,10 +1902,7 @@ body {
   }
 
   .header__nav-item {
-    padding: 15px;
-  }
-
-  .header__link-nav {
+    cursor: pointer;
     padding: 15px;
   }
 
@@ -1983,7 +1984,38 @@ body {
   }
 
   /* ========================================== */
+  .companies__grid {
+    grid-template: repeat(3, auto) / repeat(4, 1fr);
+  }
 
+  /* ========================================== */
+  .program__inner {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .program__inner::before {
+    content: url("../images/image/illustration-accordeon.svg");
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    opacity: .12;
+  }
+
+  .program__heading {
+    text-align: center;
+  }
+
+  .program__content {
+    margin: 0;
+  }
+
+  .program__image {
+    display: none;
+  }
 }
 
 /* --------------------------<<<950>>>--------------------------- */
@@ -2070,24 +2102,63 @@ body {
   .direction__items {
     grid-template: repeat(3, auto) / repeat(2, 1fr);
   }
+
+  /* ========================================== */
+
+  .testimonials__slider-wrapper {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonials__slider-item {
+    padding: 30px 15px;
+  }
+
+  .testimonials__arrows {
+    display: none;
+  }
 }
 
 /* --------------------------<<<700>>>--------------------------- */
 @media (max-width: 700px) {
-  .about__heading, .about__text {
-    margin-bottom: 30px;
-  }
-
-  .direction__heading {
+  .heading {
     margin-bottom: 40px;
   }
 
-  /* ===================================== */
+  .about__text {
+    margin-bottom: 30px;
+  }
 
+  /* ===================================== */
+  .testimonials__user-text {
+    font-size: inherit;
+  }
+
+  .testimonials__user-text {
+    padding-left: 30px;
+  }
+
+  .testimonials__user-text::before {
+    width: 20px;
+  }
+
+  .testimonials__user-info {
+    padding-left: 30px;
+  }
+
+  /* ===================================== */
+  .companies__grid {
+    grid-template: repeat(4, auto) / repeat(3, 1fr);
+  }
+
+  /* ===================================== */
+  .program__acc-head {
+    font-size: inherit;
+  }
 }
 
 /* --------------------------<<<550>>>--------------------------- */
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .header__play {
     width: 100%;
     justify-content: center;
@@ -2179,6 +2250,7 @@ body {
   .cert__item {
     margin: 0 0 10px;
   }
+
   /* ========================================== */
   .team__slider-arrows {
     display: none;
@@ -2190,7 +2262,7 @@ body {
   }
 
   .team__dots {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   .team__dots .slick-dots {
@@ -2201,7 +2273,7 @@ body {
   .team__dots li:not(:last-child) {
     margin-right: 15px;
   }
-  
+
   .team__dots button {
     font-size: 0;
     background-color: transparent;
@@ -2210,7 +2282,7 @@ body {
     display: flex;
     align-items: center;
   }
-  
+
   .team__dots button::before {
     content: "";
     width: 100%;
@@ -2218,15 +2290,52 @@ body {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.105);
   }
-  
+
   .team__dots .slick-active button::before {
     background-color: rgba(215, 186, 23, 0.71);
     transition: all .5s;
   }
+
+  /* ========================================== */
+  .testimonials__dots li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .testimonials__dots button {
+    font-size: 0;
+    background-color: transparent;
+    width: 15px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .testimonials__dots button::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.105);
+  }
+
+  .testimonials__dots .slick-active button::before {
+    background-color: rgba(215, 186, 23, 0.71);
+    transition: all .5s;
+  }
+
+  /* ========================================== */
+  .companies__grid {
+    grid-template: repeat(6, auto) / repeat(2, 1fr);
+  }
+
+  /* ========================================== */
+  .program__acc-head {
+    white-space: normal;
+  }
 }
 
-/* --------------------------<<<426>>>--------------------------- */
-@media (max-width:426px) {
+/* --------------------------<<<425>>>--------------------------- */
+@media (max-width: 425px) {
   .header__top {
     min-width: none;
     left: 0;
@@ -2275,4 +2384,7 @@ body {
 
   /* ========================================== */
 
+  .program__inner::before {
+    content: "";
+  }
 }

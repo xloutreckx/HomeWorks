@@ -55,6 +55,22 @@ $(function () {
     dots: true,
     appendDots: $('.testimonials__dots'),
     waitForAnimate: false,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          draggable: true,
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          autoplay: true,
+          autoplaySpeed: 2000,
+          draggable: true,
+        }
+      }
+    ]
   })
 
   $('.testimonials__prev').on('click', function (e) {
