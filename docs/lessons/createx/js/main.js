@@ -125,8 +125,8 @@ $(function () {
       $(this).next().slideUp()
     }
     else {
-      $('.footer__body-title').removeClass('footer__body-title--active')
-      $('.footer__body-list').slideUp()
+      // $('.footer__body-title').removeClass('footer__body-title--active')
+      // $('.footer__body-list').slideUp()
       $(this).addClass('footer__body-title--active')
       $(this).next().slideDown()
     }
