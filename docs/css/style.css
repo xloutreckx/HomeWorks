@@ -23,8 +23,8 @@ body {
 }
 
 .lesson-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: repeat(6,auto) / repeat(7,1fr);
 }
 
 .lesson-list li {
@@ -34,15 +34,25 @@ body {
 .lesson-list__link {
   font-size: 2.5rem;
   font-weight: normal;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 
-li::marker {
-  content: "#";
-  color: #0831a1;
-}
 
 .lesson-list__link:hover {
   color: aliceblue;
+}
+
+.link__createx {
+  text-align: center;
+  grid-column: span 4;
+}
+
+.link__final {
+  text-align: center;
+  grid-column: span 7;
+}
+
+.link__final a {
+  font-size: 60px;
 }
 
