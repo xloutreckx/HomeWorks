@@ -23,11 +23,12 @@ body {
 }
 
 .lesson-list {
-  display: grid;
-  grid-template: repeat(6,auto) / repeat(7,1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .lesson-list li {
+  position: relative;
   margin: 20px 30px;
 }
 
@@ -37,22 +38,13 @@ body {
   transition: color 0.5s;
 }
 
+li::marker {
+  content: "#";
+  color: rgb(0, 47, 255);
+}
+
 
 .lesson-list__link:hover {
   color: aliceblue;
-}
-
-.link__createx {
-  text-align: center;
-  grid-column: span 4;
-}
-
-.link__final {
-  text-align: center;
-  grid-column: span 7;
-}
-
-.link__final a {
-  font-size: 60px;
 }
 
