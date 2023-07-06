@@ -10,11 +10,11 @@ $(function () {
     appendDots: $('.services__dots')
   })
 
-  $('.arrow__prev').on('click', function (e) {
+  $('.services__arrow-prev').on('click', function (e) {
     e.preventDefault()
     $('.services__slider').slick('slickPrev')
   })
-  $('.arrow__next').on('click', function (e) {
+  $('.services__arrow-next').on('click', function (e) {
     e.preventDefault()
     $('.services__slider').slick('slickNext')
   })
@@ -31,11 +31,11 @@ $(function () {
     appendDots: $('.review__dots')
   })
 
-  $('.arrow__prev').on('click', function (e) {
+  $('.review__arrow-prev').on('click', function (e) {
     e.preventDefault()
     $('.review__slider').slick('slickPrev')
   })
-  $('.arrow__next').on('click', function (e) {
+  $('.review__arrow-next').on('click', function (e) {
     e.preventDefault()
     $('.review__slider').slick('slickNext')
   })
