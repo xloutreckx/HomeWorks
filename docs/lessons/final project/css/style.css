@@ -9,6 +9,7 @@
 
 /* =======================<<<GLOBAL>>>======================== */
 /* =======================<<<GLOBAL>>>======================== */
+/* =======================<<<GLOBAL>>>======================== */
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -22,7 +23,7 @@
 }
 
 .main__hero {
-  padding: 120px 0 75px;
+  padding: 110px 0;
 }
 
 .main__card {
@@ -48,6 +49,10 @@
 }
 
 .main__process {
+  padding: 100px 0;
+}
+
+.main__warranty {
   padding: 100px 0;
 }
 
@@ -91,6 +96,7 @@
 
 .logo {}
 
+/* ==========================<<<HEADER>>>======================== */
 /* ==========================<<<HEADER>>>======================== */
 /* ==========================<<<HEADER>>>======================== */
 
@@ -168,6 +174,9 @@
 
 /* ==========================<<<MAIN>>>=========================== */
 /* ==========================<<<MAIN>>>=========================== */
+/* ==========================<<<MAIN>>>=========================== */
+
+/* ====================<<<HERO-SECTION>>>=================== */
 /* ====================<<<HERO-SECTION>>>=================== */
 /* ====================<<<HERO-SECTION>>>=================== */
 .hero {
@@ -176,7 +185,6 @@
 
 .hero__inner {
   display: flex;
-  min-height: 70vh;
 }
 
 .hero__content {
@@ -215,6 +223,7 @@
   object-fit: contain;
 }
 
+/* ==========================<<<CARD>>>=========================== */
 /* ==========================<<<CARD>>>=========================== */
 /* ==========================<<<CARD>>>=========================== */
 
@@ -278,13 +287,14 @@
 
 /* ==========================<<<ABOUT>>>=========================== */
 /* ==========================<<<ABOUT>>>=========================== */
+/* ==========================<<<ABOUT>>>=========================== */
 
 .about {}
 
 .about__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about__image-box {
@@ -363,6 +373,7 @@
 
 .about__button {}
 
+/* ==========================<<<SERVICES>>>=========================== */
 /* ==========================<<<SERVICES>>>=========================== */
 /* ==========================<<<SERVICES>>>=========================== */
 
@@ -512,11 +523,11 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.services__slider-wrapper .arrow__prev {
+.services__slider-wrapper .services__arrow-prev {
   left: -45px;
 }
 
-.services__slider-wrapper .arrow__next {
+.services__slider-wrapper .services__arrow-next {
   right: -45px;
 }
 
@@ -552,6 +563,7 @@
   background-color: rgba(0, 0, 0, 0.10);
 }
 
+/* ==========================<<<BANNER>>>=========================== */
 /* ==========================<<<BANNER>>>=========================== */
 /* ==========================<<<BANNER>>>=========================== */
 
@@ -594,6 +606,7 @@
   object-fit: cover;
 }
 
+/* ==========================<<<BANNER>>>=========================== */
 /* ==========================<<<BANNER>>>=========================== */
 /* ==========================<<<BANNER>>>=========================== */
 
@@ -713,11 +726,11 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.review__slider-wrapper .arrow__prev {
+.review__slider-wrapper .review__arrow-prev {
   left: -45px;
 }
 
-.review__slider-wrapper .arrow__next {
+.review__slider-wrapper .review__arrow-next {
   right: -45px;
 }
 
@@ -753,6 +766,7 @@
   background-color: rgba(0, 0, 0, 0.10);
 }
 
+/* ==========================<<<PROCESS>>>=========================== */
 /* ==========================<<<PROCESS>>>=========================== */
 /* ==========================<<<PROCESS>>>=========================== */
 
@@ -815,12 +829,9 @@
   display: flex;
   justify-content: space-between;
   min-width: 950px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
-.process__acc-row:first-child {
-  margin-top: -20px;
-}
 
 .process__acc-row span {
   display: block;
@@ -828,7 +839,7 @@
   text-align: left;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 28px;
 }
 
 .process__acc-row p {
@@ -838,10 +849,129 @@
   line-height: 28px;
 }
 
+.process__acc-row a {
+  color: var(--text-color-two);
+  display: flex;
+  justify-content: space-between;
+  max-width: 270px;
+}
+
 .row__contract {
   color: var(--text-color-two);
 }
 
-.process__acc-link--active .process__acc-head svg  {
+.process__acc-link--active .process__acc-head svg {
   transform: rotate(180deg);
-} 
+}
+
+/* =======================<<<WARRANTY>>>======================== */
+/* =======================<<<WARRANTY>>>======================== */
+/* =======================<<<WARRANTY>>>======================== */
+
+
+.warranty {
+  background: url("../images/image/image-warranty.jpg") no-repeat center / cover;
+}
+
+.warranty__inner {}
+
+.warranty__top-block {
+  margin-bottom: 100px;
+}
+
+.warranty__heading {
+  margin-bottom: 40px;
+}
+
+.warranty__top-grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.warranty__top-item {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+.item__height {
+  font-size: 22px;
+  padding: 20px 20px 20px 40px;
+}
+
+.warranty__top-content {
+  display: flex;
+  align-items: center;
+}
+
+.warranty__top-item span {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-left: 20px;
+}
+
+.warranty__contract {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.warranty__contract p {
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 700px;
+}
+
+.warranty__contract a {
+  display: flex;
+  align-items: center;
+  min-width: 295px;
+  justify-content: space-between;
+  color: var(--text-color-two);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.warranty__bottom-block {}
+
+.warranty__bottom-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.warranty__bot-item {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  min-height: 270px;
+}
+
+.item__long {
+  max-width: 735px;
+}
+
+.item__little {
+  max-width: 520px;
+}
+
+.warranty__item-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+
+.warranty__item-text {
+  color: rgba(0, 0, 0, 0.80);
+  font-size: 20px;
+  line-height: 32px;
+}
