@@ -53,5 +53,82 @@ $(function () {
     }
   })
 
+  $('.compare__slider').slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    draggable: false,
+    infinite: true,
+    waitForAnimate: false,
+    appendDots: $('.compare__dots')
+  })
+
+  $('.compare__arrow-prev').on('click', function (e) {
+    e.preventDefault()
+    $('.compare__slider').slick('slickPrev')
+  })
+  $('.compare__arrow-next').on('click', function (e) {
+    e.preventDefault()
+    $('.compare__slider').slick('slickNext')
+  })
+
+  $('.more__slider').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    draggable: false,
+    infinite: true,
+    waitForAnimate: false,
+    appendDots: $('.more__dots')
+  })
+
+  $('.more__arrow-prev').on('click', function (e) {
+    e.preventDefault()
+    $('.more__slider').slick('slickPrev')
+  })
+  $('.more__arrow-next').on('click', function (e) {
+    e.preventDefault()
+    $('.more__slider').slick('slickNext')
+  })
+
+  $('.team__slider').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    draggable: false,
+    infinite: true,
+    waitForAnimate: false,
+    appendDots: $('.team__dots')
+  })
+
+  $('.team__arrow-prev').on('click', function (e) {
+    e.preventDefault()
+    $('.team__slider').slick('slickPrev')
+  })
+  $('.team__arrow-next').on('click', function (e) {
+    e.preventDefault()
+    $('.team__slider').slick('slickNext')
+  })
+
+  $('.team__cl-slider').slick({
+    centerMode: true,
+    centerPadding: '-40px',
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    draggable: false,
+    infinite: true,
+    waitForAnimate: false,
+    appendDots: $('.team__cl-dots')
+  })
+
+  $('.team__cl-arrow-prev').on('click', function (e) {
+    e.preventDefault()
+    $('.team__cl-slider').slick('slickPrev')
+  })
+  $('.team__cl-arrow-next').on('click', function (e) {
+    e.preventDefault()
+    $('.team__cl-slider').slick('slickNext')
+  })
 
 })
