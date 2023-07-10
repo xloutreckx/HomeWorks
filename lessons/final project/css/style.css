@@ -22,7 +22,16 @@
   height: 100%;
 }
 
-.main__hero {
+.main__hero,
+.main__services,
+.main__banner,
+.main__review,
+.main__process,
+.main__warranty,
+.main__compare,
+.main__more,
+.main__team,
+.main__questions {
   padding: 110px 0;
 }
 
@@ -31,42 +40,6 @@
 }
 
 .main__about {}
-
-.main__services {
-  padding: 100px 0;
-}
-
-.main__services {
-  padding: 100px 0;
-}
-
-.main__banner {
-  padding: 100px 0;
-}
-
-.main__review {
-  padding: 100px 0;
-}
-
-.main__process {
-  padding: 100px 0;
-}
-
-.main__warranty {
-  padding: 100px 0;
-}
-
-.main__compare {
-  padding: 100px 0;
-}
-
-.main__more {
-  padding: 100px 0;
-}
-
-.main__team {
-  padding: 100px 0;
-}
 
 .button {
   display: inline-block;
@@ -950,18 +923,21 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+}
+
+.warranty__contract path,
+.warranty__contract a:hover path,
+.warranty__contract a:hover,
+.warranty__contract a {
   transition: all .5s;
 }
 
-.warranty__contract path {
-  transition: all .5s;
-}
-
-.warranty__contract:hover path,
-.warranty__contract:hover a {
+.warranty__contract a:hover path {
   stroke: #000;
+}
+
+.warranty__contract a:hover {
   color: #000;
-  transition: all .5s;
 }
 
 .warranty__bottom-block {}
@@ -1343,7 +1319,7 @@
   line-height: 40px;
   padding: 16px 30px;
   border-radius: 10px;
-  border: 3px solid rgba(250, 0, 44, 0.15);
+  border: 3px solid #fed9df;
 }
 
 .more__helped span {
@@ -1664,11 +1640,11 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-  .team__cl-arrow-prev {
+.team__cl-arrow-prev {
   left: -30px;
 }
 
-  .team__cl-arrow-next {
+.team__cl-arrow-next {
   right: -30px;
 }
 
@@ -1702,4 +1678,63 @@
   width: 100%;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.10);
+}
+
+/* =======================<<<QUESTIONS>>>======================== */
+/* =======================<<<QUESTIONS>>>======================== */
+/* =======================<<<QUESTIONS>>>======================== */
+
+.questions {}
+
+.questions__inner {}
+
+.questions__heading {
+  margin-bottom: 40px;
+}
+
+.questions__acc {}
+
+.questions__acc-line {
+  width: 100%;
+  height: 1px;
+  background: #242628;
+  opacity: .1;
+}
+
+.questions__acc-item {}
+
+.questions__acc-link {}
+
+.questions__acc-head {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 30px 0 30px 30px;
+}
+.questions__acc-head::before,
+.questions__acc-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--text-color-two);
+}
+
+.questions__acc-head::after {
+  transform: rotate(-90deg);
+  transition: all .5s;
+}
+.questions__acc-link--active .questions__acc-head::after {
+  transform: rotate(0);
+}
+
+.questions__acc-text {
+  color: rgba(0, 0, 0, 0.80);
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 30px 30px;
 }
