@@ -151,6 +151,12 @@ function init() {
     center: [56.12687506861638,47.323114499999996],
     zoom: 15
   });
+
+  let placemark = new ymaps.Placemark([56.12687506861638,47.323114499999996], {}, {
+
+  })
+
+  map.geoObjects.add(placemark);
 }
 
 ymaps.ready(init);
