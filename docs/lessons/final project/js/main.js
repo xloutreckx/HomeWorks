@@ -145,3 +145,12 @@ $(function () {
   })
 
 })
+
+function init() {
+  let map = new ymaps.Map('map-test', {
+    center: [56.12687506861638,47.323114499999996],
+    zoom: 15
+  });
+}
+
+ymaps.ready(init);
