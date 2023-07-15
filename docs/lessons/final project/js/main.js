@@ -144,6 +144,21 @@ $(function () {
     }
   })
 
+  $('.burger, .overlay, .header__inner a').on('click', function (e) {
+    e.preventDefault()
+    $('.header__inner').toggleClass('header__inner--open')
+    $('.overlay').toggleClass('overlay--show')
+    $('.burger').toggleClass('burger--active');
+  })
+
+  $(window).on('.scroll', function () {
+    if ($(window).scrollTop() > 0 && $('.header__inner').hasClass('header__inner--open') === false) {
+      $('.burger').addClass('burger--follow')
+    } else {
+      $('.burger').removeClass('burger--follow')
+    }
+  })
+
 })
 
 function init() {
