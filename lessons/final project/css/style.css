@@ -24,6 +24,10 @@
   height: 100%;
 }
 
+.unscroll{
+  overflow:hidden;
+  }
+
 .main__about {}
 
 .main__hero,
