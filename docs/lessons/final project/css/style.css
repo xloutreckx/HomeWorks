@@ -2156,6 +2156,10 @@
     transform: translateX(0);
   }
 
+  body:has(.header__inner--open) {
+    overflow: hidden;
+  }
+
   .header__logo {
     display: none;
   }
