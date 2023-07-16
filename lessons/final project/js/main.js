@@ -159,11 +159,6 @@ $(function () {
     }
   })
 
-  let html = document.querySelector("html")
-document.querySelector(".burger").onclick = function(){
-html.classList.toggle("unscroll")
-}
-
 })
 
 function init() {
