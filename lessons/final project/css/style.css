@@ -12,8 +12,7 @@
 /* =======================<<<GLOBAL>>>======================== */
 .wrapper {}
 
-.wrapper {
-  min-height: 100%;
+.no-scroll {
   overflow: hidden;
 }
 
@@ -23,7 +22,6 @@
   padding: 0 15px;
   height: 100%;
 }
-
 .main__about {}
 
 .main__hero,
@@ -2147,12 +2145,13 @@
     transition: transform .5s;
     margin: 0;
   }
+/* не работает в firefox =( */
+  /* body:has(.header__inner--open) {
+    overflow: hidden;
+  } */
 
   .header__inner--open {
     transform: translateX(0);
-  }
-
-  body:has(.header__inner--open) {
     overflow: hidden;
   }
 

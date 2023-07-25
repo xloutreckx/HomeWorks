@@ -1,5 +1,14 @@
 $(function () {
 
+  $('.burger, .overlay, .header__inner a').on('click', () => {
+    if ($('body').hasClass('no-scroll')) {
+      $('body').removeClass('no-scroll')
+    } else {
+      $('body').addClass('no-scroll')
+    }
+
+  } )
+
   $('.services__slider').slick({
     dots: false,
     arrows: false,
@@ -151,23 +160,15 @@ $(function () {
     $('.burger').toggleClass('burger--active');
   })
 
-  $(window).on('.scroll', function () {
-    if ($(window).scrollTop() > 0 && $('.header__inner').hasClass('header__inner--open') === false) {
-      $('.burger').addClass('burger--follow')
-    } else {
-      $('.burger').removeClass('burger--follow')
-    }
-  })
-
 })
 
 function init() {
   let map = new ymaps.Map('map-test', {
-    center: [56.12687506861638,47.323114499999996],
+    center: [56.12687506861638, 47.323114499999996],
     zoom: 15
   });
 
-  let placemark = new ymaps.Placemark([56.12687506861638,47.323114499999996], {}, {
+  let placemark = new ymaps.Placemark([56.12687506861638, 47.323114499999996], {}, {
 
   })
 
