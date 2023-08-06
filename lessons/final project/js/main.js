@@ -1,166 +1,137 @@
-$(function () {
+(function () {
 
-  $('.burger, .overlay, .header__inner a').on('click', () => {
-    if ($('body').hasClass('no-scroll')) {
-      $('body').removeClass('no-scroll')
-    } else {
-      $('body').addClass('no-scroll')
-    }
+  // Слайдер секции "services"
 
-  } )
+  const swiperServices = new Swiper('.services__slider', {
 
-  $('.services__slider').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.services__dots')
-  })
+    slidesPerView: 3,
+    spaceBetween: 10,
+    effect: 'coverflow',
+    coverflowEffect: {
+      slideShadows: false,
+    },
 
-  $('.services__arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.services__slider').slick('slickPrev')
-  })
-  $('.services__arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.services__slider').slick('slickNext')
+    pagination: {
+      el: '.services__dots',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.services__next',
+      prevEl: '.services__prev',
+    },
+
+    slideClass: 'services__slider-item',
+    wrapperClass: 'services__slider-wrapper',
   })
 
-  $('.review__slider').slick({
-    centerMode: true,
-    centerPadding: '-40px',
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.review__dots')
+    // Слайдер секции "review"
+
+  const swiperReview = new Swiper('.review__slider', {
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 2,
+
+    pagination: {
+      el: '.review__dots',
+      // clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.review__next',
+      prevEl: '.review__prev',
+    },
+
+    slideClass: 'review__slide',
+    wrapperClass: 'review__slider-wrapper',
   })
 
-  $('.review__arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.review__slider').slick('slickPrev')
-  })
-  $('.review__arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.review__slider').slick('slickNext')
+    // Слайдер секции "compare"
+
+  const swiperCompare = new Swiper('.compare__slider', {
+
+    slidesPerView: 1,
+    loop: true,
+    effect: 'fade',
+
+    navigation: {
+      nextEl: '.compare__next',
+      prevEl: '.compare__prev',
+    },
+
+    slideClass: 'compare__slide',
+    wrapperClass: 'compare__slider-wrapper',
   })
 
-  $('.process__acc-link').on('click', function (e) {
-    e.preventDefault()
-    if ($(this).hasClass('process__acc-link--active')) {
-      $(this).removeClass('process__acc-link--active')
-      $(this).children('.process__acc-list').slideUp()
-    } else {
-      $('.process__acc-link').removeClass('process__acc-link--active')
-      $('.process__acc-list').slideUp()
-      $(this).addClass('process__acc-link--active')
-      $(this).children('.process__acc-list').slideDown()
-    }
-  })
+      // Слайдер секции "more"
 
-  $('.compare__slider').slick({
-    dots: true,
-    arrows: false,
-    slidesToShow: 1,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.compare__dots')
-  })
+      const swiperMore = new Swiper('.more__slider', {
 
-  $('.compare__arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.compare__slider').slick('slickPrev')
-  })
-  $('.compare__arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.compare__slider').slick('slickNext')
-  })
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 3,
+    
+        navigation: {
+          nextEl: '.more__next',
+          prevEl: '.more__prev',
+        },
+    
+        slideClass: 'more__slide',
+        wrapperClass: 'more__slider-wrapper',
+      })
 
-  $('.more__slider').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.more__dots')
-  })
+            // Слайдер секции "team"
 
-  $('.more__arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.more__slider').slick('slickPrev')
-  })
-  $('.more__arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.more__slider').slick('slickNext')
-  })
+            const swiperTeam = new Swiper('.team__slider', {
 
-  $('.team__slider').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.team__dots')
-  })
+              slidesPerView: 3,
+              spaceBetween: 30,
 
-  $('.team__arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.team__slider').slick('slickPrev')
-  })
-  $('.team__arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.team__slider').slick('slickNext')
-  })
+              pagination: {
+                el: '.team__dots',
+                clickable: true,
+              },
+          
+              navigation: {
+                nextEl: '.team__next',
+                prevEl: '.team__prev',
+              },
+          
+              slideClass: 'team__slide',
+              wrapperClass: 'team__slider-wrapper',
+            })
 
-  $('.team__cl-slider').slick({
-    centerMode: true,
-    centerPadding: '-40px',
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    draggable: false,
-    infinite: true,
-    waitForAnimate: false,
-    appendDots: $('.team__cl-dots')
-  })
+            // Слайдер секции "team-cl"
 
-  $('.team__cl-arrow-prev').on('click', function (e) {
-    e.preventDefault()
-    $('.team__cl-slider').slick('slickPrev')
-  })
-  $('.team__cl-arrow-next').on('click', function (e) {
-    e.preventDefault()
-    $('.team__cl-slider').slick('slickNext')
-  })
+            const swiperTeamCl = new Swiper('.team__cl-slider', {
 
-  $('.questions__acc-link').on('click', function (e) {
-    e.preventDefault()
-    if ($(this).hasClass('questions__acc-link--active')) {
-      $(this).removeClass('questions__acc-link--active')
-      $(this).children('.questions__acc-text').slideUp()
-    } else {
-      $('.questions__acc-link').removeClass('questions__acc-link--active')
-      $('.questions__acc-text').slideUp()
-      $(this).addClass('questions__acc-link--active')
-      $(this).children('.questions__acc-text').slideDown()
-    }
-  })
+              slidesPerView: 3,
+              spaceBetween: 30,
+              centeredSlides: true,
+              loop: true,
+              loopedSlides: 3,
 
-  $('.burger, .overlay, .header__inner a').on('click', function (e) {
-    e.preventDefault()
-    $('.header__inner').toggleClass('header__inner--open')
-    $('.overlay').toggleClass('overlay--show')
-    $('.burger').toggleClass('burger--active');
-  })
+              pagination: {
+                el: '.team__cl-dots',
+                // clickable: true,
+              },
+          
+              navigation: {
+                nextEl: '.team__cl-next',
+                prevEl: '.team__cl-prev',
+              },
+          
+              slideClass: 'team__cl-slide',
+              wrapperClass: 'team__cl-slider-wrapper',
+            })
+            
+})()
 
-})
+// подключение Яндекс карты
 
 function init() {
   let map = new ymaps.Map('map-test', {
