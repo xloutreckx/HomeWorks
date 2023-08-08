@@ -686,16 +686,16 @@
             </div>
             <ol class="process__acc accordion-list">
               <li class="process__line"></li>
-              <li class="process__acc-item">
-                <button class="process__acc-control caption" type="button">
+              <li class="process__acc-item accordion-list__item">
+                <button class="process__acc-control caption accordion-list__control" type="button">
                   <span class="caption__number">01</span>
                   <h3 class="caption__title">Подбор автомобиля</h3>
                   <svg class="caption__arrow-down" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                    <circle cx="32" cy="32" r="32" fill="#FA002C"/>
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
                     <path d="M22.3496 27.9371L32.0004 37.5879L41.6512 27.9371" stroke="white" stroke-width="3" />
                   </svg>
                 </button>
-                <ul class="process__acc-content">
+                <ul class="process__acc-content accordion-list__content">
                   <li class="process__acc-row subject">
                     <h4 class="subject__heading">Консультация</h4>
                     <p class="subject__desc">Индивидуальный подход и консультация от опытных специалистов по всем
@@ -739,8 +739,8 @@
                 </ul>
               </li>
               <li class="process__line"></li>
-              <li class="process__acc-item">
-                <button class="process__acc-control caption" type="button">
+              <li class="process__acc-item accordion-list__item">
+                <button class="process__acc-control caption accordion-list__control" type="button">
                   <span class="caption__number">02</span>
                   <h3 class="caption__title">Покупка</h3>
                   <svg class="caption__arrow-down" width="64" height="64" viewBox="0 0 64 64" fill="none">
@@ -748,7 +748,7 @@
                     <path d="M22.3496 27.9371L32.0004 37.5879L41.6512 27.9371" stroke="white" stroke-width="3" />
                   </svg>
                 </button>
-                <ul class="process__acc-content">
+                <ul class="process__acc-content accordion-list__content">
                   <li class="process__acc-row subject">
                     <h4 class="subject__heading">Участие в аукционе</h4>
                     <p class="subject__desc">После согласования марки и бюджета автомобиля, ваш менеджер участвует в
@@ -790,8 +790,8 @@
                 </ul>
               </li>
               <li class="process__line"></li>
-              <li class="process__acc-item">
-                <button class="process__acc-control caption" type="button">
+              <li class="process__acc-item accordion-list__item">
+                <button class="process__acc-control caption accordion-list__control" type="button">
                   <span class="caption__number">03</span>
                   <h3 class="caption__title">Доставка в ваш город</h3>
                   <svg class="caption__arrow-down" width="64" height="64" viewBox="0 0 64 64" fill="none"
@@ -800,7 +800,7 @@
                     <path d="M22.3496 27.9371L32.0004 37.5879L41.6512 27.9371" stroke="white" stroke-width="3" />
                   </svg>
                 </button>
-                <ul class="process__acc-content">
+                <ul class="process__acc-content accordion-list__content">
                   <li class="process__acc-row subject">
                     <h4 class="subject__heading">Выдача авто</h4>
                     <p class="subject__desc">Уже растаможенный автомобиль передается Вам на основании договора
@@ -1754,173 +1754,122 @@
                 Часто задаваемые вопросы
               </h2>
             </div>
-            <ul class="questions__acc">
+            <ul class="questions__acc accordion-list">
               <li class="questions__acc-line"></li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Способы оплаты
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">На расчетный счет, картой или наличными в кассе
-                    автосалона.</p>
-                </a>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Способы оплаты
+                  <svg class="questions__acc-icon" width="64" height="64">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">На расчетный счет, картой или наличными в
+                  кассе
+                  автосалона.</p>
               </li>
-              <li class="questions__acc-line">
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Какие автомобили
+                  доставляете?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Новые и с пробегом в соответствии с вашим
+                  бюджетом.</p>
               </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Какие автомобили доставляете?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Новые и с пробегом в соответствии с вашим
-                    бюджетом.</p>
-                </a>
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Могу заказать у вас запчасти?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Да, если заказали или купили у нас автомобиль.</p>
               </li>
-              <li class="questions__acc-line">
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Какие гарантии, что с автомобилем ничего не произойдёт в пути?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Автомобиль застрахован до вручения заказчику.</p>
               </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Могу заказать у вас запчасти?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Да, если заказали или купили у нас автомобиль..
-                  </p>
-                </a>
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Какие документы получу я в комплекте с авто?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Пакет документов, для регистрации в РФ</p>
               </li>
-              <li class="questions__acc-line">
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">В какие города России доставляете автомобили?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Доставляем во все города РФ.</p>
               </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Какие гарантии, что с автомобилем ничего не произойдёт в пути?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Автомобиль застрахован до вручения заказчику.
-                  </p>
-                </a>
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Какие сроки доставки автомобиля?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Средний срок доставки 75-90 дней.</p>
               </li>
-              <li class="questions__acc-line">
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Можно ли вернуть автомобиль после покупки на аукционе?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Да, но с оплатой штрафных санкций аукциона.</p>
               </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Какие документы получу я в комплекте с авто?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Пакет документов, для регистрации в РФ</p>
-                </a>
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Какие сроки оплаты после выигрыша на аукционе?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Стоимость автомобиля нужно оплатить в течении трех дней.</p>
               </li>
-              <li class="questions__acc-line">
+              <li class="questions__acc-line"></li>
+              <li class="questions__acc-item accordion-list__item">
+                <button class="questions__acc-control accordion-list__control" type="button">Что если я откажусь от покупки автомобиля?
+                  <svg class="questions__acc-icon" width="64" height="64" fill="none">
+                    <circle cx="32" cy="32" r="32" fill="#FA002C" />
+                    <path d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="4" stroke-linecap="round" />
+                    <path d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="4" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <p class="questions__acc-content accordion-list__content">Вернем предоплату без удержаний.</p>
               </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">В какие города России доставляете автомобили?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Доставляем во все города РФ.</p>
-                </a>
-              </li>
-              <li class="questions__acc-line">
-              </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Какие сроки доставки автомобиля?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Средний срок доставки 75-90 дней.</p>
-                </a>
-              </li>
-              <li class="questions__acc-line">
-              </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Можно ли вернуть автомобиль после покупки на аукционе?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Да, но с оплатой штрафных санкций аукциона.</p>
-                </a>
-              </li>
-              <li class="questions__acc-line">
-              </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Какие сроки оплаты после выигрыша на аукционе?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Стоимость автомобиля нужно оплатить в течении
-                    трех дней.</p>
-                </a>
-              </li>
-              <li class="questions__acc-line">
-              </li>
-              <li class="questions__acc-item">
-                <a class="questions__acc-link" href="#">
-                  <div class="questions__acc-head">Что если я откажусь от покупки автомобиля?
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <circle id="Ellipse 97" cx="32" cy="32" r="32" fill="#FA002C" />
-                      <path id="Vector 179" d="M32.1421 18.0004L32.1421 46.2847" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                      <path id="Vector 180" d="M46.2847 32.1421L18.0004 32.1421" stroke="white" stroke-width="3"
-                        stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <p class="questions__acc-text" style="display: none;">Вернем предоплату без удержаний.</p>
-                </a>
-              </li>
-              <li class="questions__acc-line">
-              </li>
+              <li class="questions__acc-line"></li>
             </ul>
           </div>
         </div>

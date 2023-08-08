@@ -744,11 +744,11 @@
   stroke: #000000;
 }
 
-.process__acc-item--opened .caption__arrow-down path {
+.accordion-list__item--opened .caption__arrow-down path {
   transform-origin: center;
   transform: rotateX(-180deg);
 }
-.process__acc-item--opened .caption__arrow-down circle {
+.accordion-list__item--opened .caption__arrow-down circle {
   fill: #fa002e32;
 }
 
@@ -1468,48 +1468,57 @@
   width: 100%;
   height: 1px;
   background: #242628;
-  opacity: .1;
+  opacity: .2;
 }
 
 .questions__acc-item {}
 
-.questions__acc-head path,
-.questions__acc-head circle {
+.questions__acc-icon path,
+.questions__acc-icon circle {
   transform-origin: center;
   transition: transform .6s;
 }
 
-.questions__acc-head:hover circle {
+.questions__acc-control:hover circle {
   transform-origin: center;
   transform: scale(0);
 }
 
-.questions__acc-head:hover path {
+.questions__acc-control:hover .questions__acc-icon path {
   stroke: #000000;
 }
 
-.questions__acc-link--active path:nth-child(2) {
+.accordion-list__item--opened .questions__acc-icon circle {
+  transform: scale(0);
+}
+.accordion-list__item--opened .questions__acc-icon path {
+  stroke: black;
+}
+
+.accordion-list__item--opened .questions__acc-icon path:nth-child(2) {
   transform-origin: center;
   transform: rotateZ(-90deg);
 }
 
-.questions__acc-link {}
-
-.questions__acc-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  padding: 16px 30px;
+.questions__acc-control {
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 2% 2.5%;
 }
 
-.questions__acc-text {
+.questions__acc-content {
   color: rgba(0, 0, 0, 0.80);
   font-size: 20px;
-  line-height: 24px;
-  margin: 0 0 30px 30px;
+  line-height: 50px;
+  margin-left: 2.5%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
 }
 
 /* =======================<<<CALCULATE>>>======================== */
@@ -1794,10 +1803,7 @@
 @media (max-width: 950px) {
   .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 50;
     background: rgba(31, 31, 31, 0.75);
     visibility: hidden;
