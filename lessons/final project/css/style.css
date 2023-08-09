@@ -63,6 +63,11 @@
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.48);
 }
 
+.button:active {
+  color: black;
+  background-color: #c4c4c482;
+}
+
 .heading {}
 
 .heading__title {
@@ -731,25 +736,13 @@
 
 .process__acc-item {}
 
-.caption__arrow-down circle,
 .caption__arrow-down path {
   transition: all .5s;
-}
-
-.process__acc-control:hover .caption__arrow-down circle {
-  fill: #fa002e32;
-}
-
-.process__acc-control:hover .caption__arrow-down path {
-  stroke: #000000;
 }
 
 .accordion-list__item--opened .caption__arrow-down path {
   transform-origin: center;
   transform: rotateX(-180deg);
-}
-.accordion-list__item--opened .caption__arrow-down circle {
-  fill: #fa002e32;
 }
 
 .process__acc-control {
@@ -1473,26 +1466,9 @@
 
 .questions__acc-item {}
 
-.questions__acc-icon path,
-.questions__acc-icon circle {
+.questions__acc-icon path {
   transform-origin: center;
   transition: transform .6s;
-}
-
-.questions__acc-control:hover circle {
-  transform-origin: center;
-  transform: scale(0);
-}
-
-.questions__acc-control:hover .questions__acc-icon path {
-  stroke: #000000;
-}
-
-.accordion-list__item--opened .questions__acc-icon circle {
-  transform: scale(0);
-}
-.accordion-list__item--opened .questions__acc-icon path {
-  stroke: black;
 }
 
 .accordion-list__item--opened .questions__acc-icon path:nth-child(2) {
@@ -1896,8 +1872,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
-    min-width: 320px;
+    width: 50%;
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateX(100%);
