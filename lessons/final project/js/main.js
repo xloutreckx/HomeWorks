@@ -10,8 +10,20 @@
     const overlay = document.querySelector('.overlay')
     const burgerIcon = e.target.closest('.burger')
     const burgerNavLink = e.target.closest('.header__nav-link')
+    const burgerLogo = e.target.closest('.header__logo-mobile')
+    const burgerSocials = e.target.closest('.header__mob-social-link')
+    const burgerDocs = e.target.closest('.header__mob-req-item')
 
-    if (!burgerIcon && !burgerNavLink) return
+
+    overlay.addEventListener('click', () => {
+      burger.classList.remove('burger--active')
+      innerHeader.classList.remove('header__inner--open')
+      overlay.classList.remove('overlay--show')
+      document.body.classList.remove('no-scroll')
+    })
+
+    if (!burgerIcon && !burgerNavLink && !burgerLogo && !burgerSocials && !burgerDocs) return
+    if (document.documentElement.clientWidth >= 950) return
 
     if (!burger.classList.contains('burger--active')
       && !innerHeader.classList.contains('header__inner--open')
@@ -27,6 +39,8 @@
       document.body.classList.remove('no-scroll')
     }
   }
+
+
 
   // Слайдер секции "services"
 
