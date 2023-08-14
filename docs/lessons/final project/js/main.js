@@ -5,6 +5,7 @@
   document.addEventListener('click', burgerInit)
 
   function burgerInit(e) {
+    e.preventDefault()
     const burger = document.querySelector('.burger')
     const innerHeader = document.querySelector('.header__inner')
     const overlay = document.querySelector('.overlay')
