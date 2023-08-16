@@ -66,6 +66,27 @@
 
     slideClass: 'services__slider-item',
     wrapperClass: 'services__slider-wrapper',
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
+      },
+      460: {
+        slidesPerView: 1.2,
+        effect: false,
+      },
+      600: {
+        slidesPerView: 1.5,
+        effect: false,
+      },
+      850: {
+        slidesPerView: 2,
+        effect: false,
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    }
   })
 
   // Слайдер секции "review"
