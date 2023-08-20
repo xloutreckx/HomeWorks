@@ -49,10 +49,6 @@
 
     slidesPerView: 3,
     spaceBetween: 10,
-    effect: 'coverflow',
-    coverflowEffect: {
-      slideShadows: false,
-    },
 
     pagination: {
       el: '.services__dots',
@@ -72,15 +68,12 @@
       },
       460: {
         slidesPerView: 1.2,
-        effect: false,
       },
       600: {
         slidesPerView: 1.5,
-        effect: false,
       },
       850: {
         slidesPerView: 2,
-        effect: false,
       },
       1100: {
         slidesPerView: 3,
@@ -98,6 +91,28 @@
     centeredSlides: true,
     loop: true,
     loopedSlides: 2,
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
+      },
+      500: {
+        slidesPerView: 1.5,
+      },
+      650: {
+        slidesPerView: 1.6,
+      },
+      850: {
+        slidesPerView: 2,
+      },
+      1100: {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+      1250: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    },
 
     pagination: {
       el: '.review__dots',
