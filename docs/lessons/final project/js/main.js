@@ -87,7 +87,7 @@
   const swiperReview = new Swiper('.review__slider', {
 
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 35,
     centeredSlides: true,
     loop: true,
     loopedSlides: 2,
