@@ -856,44 +856,46 @@
   margin-bottom: 40px;
 }
 
-.warranty__top-grid {
-  display: grid;
-  grid-template: repeat(2, auto) / repeat(3, 1fr);
+.warranty__top-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 32px;
 }
+
 
 .warranty__top-item {
   display: flex;
   align-items: center;
   padding: 40px;
   border-radius: 20px;
+  min-height: 160px;
   background: #FFF;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
 }
 
-.item__height {
-  font-size: 22px;
-  padding: 20px 20px 20px 40px;
+.item--ind-height {
+  padding: 25px 40px;
 }
 
-.warranty__top-content {
-  display: flex;
-  align-items: center;
+.warranty__top-image svg {
+  width: 60px;
 }
 
-.warranty__top-item span {
-  font-size: 24px;
+.warranty__top-text {
+  font-size: 23px;
+  max-width: 250px;
   font-weight: 500;
   line-height: 36px;
   margin-left: 20px;
-  max-width: 250px;
 }
 
 .warranty__contract {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .warranty__contract p {
@@ -1801,7 +1803,7 @@
   }
 
   /* ============================================= */
-  
+
   .services__text-name {
     max-width: 115px;
   }
@@ -2339,15 +2341,15 @@
   }
 
   /* ========================================================= */
-  
+
   .process__heading .heading__title {
     font-size: 40px;
   }
-  
+
   .caption__number {
     font-size: 75px;
   }
-  
+
   .caption__title {
     font-size: 30px;
   }
@@ -2360,18 +2362,29 @@
     flex-direction: column;
     width: 76.2%;
   }
-  
+
   .subject__heading {
     margin-bottom: 20px;
   }
-  
+
   .subject__desc {
     width: 100%;
   }
-  
+
   .contract__link {
     margin-top: 10px;
   }
+
+  /* ========================================================= */
+
+  .warranty__heading .heading__title {
+    font-size: 40px;
+  }
+
+  .warranty__top-text {
+    font-size: 20px;
+    max-width: 215px;
+}
 }
 
 /* =======================<<<600>>>======================== */
@@ -2540,46 +2553,46 @@
 
   /* ========================================================= */
 
-.banner__content {
-  text-align: left;
-}
+  .banner__content {
+    text-align: left;
+  }
 
-.banner__heading {
-  max-width: 385px;
-}
+  .banner__heading {
+    max-width: 385px;
+  }
 
-.banner__heading .heading__title {
-  font-size: 32px;
-}
+  .banner__heading .heading__title {
+    font-size: 32px;
+  }
 
-.banner__button {
-  text-align: center;
-  min-width: 100%;
-  font-size: 18px;
-}
+  .banner__button {
+    text-align: center;
+    min-width: 100%;
+    font-size: 18px;
+  }
 
   /* ========================================================= */
 
-.review__heading .heading__title {
-  font-size: 34px;
-  line-height: 46px;
-  max-width: 450px;
-}
+  .review__heading .heading__title {
+    font-size: 34px;
+    line-height: 46px;
+    max-width: 450px;
+  }
 
-.review__prev,
-.review__next {
-  width: 40px;
-  height: 40px;
-}
+  .review__prev,
+  .review__next {
+    width: 40px;
+    height: 40px;
+  }
 
-.review__video-desc {
-  font-size: 0.6em;
-}
+  .review__video-desc {
+    font-size: 0.6em;
+  }
 
-.review__button {
-  font-size: 18px;
-  width: 100%;
-}
+  .review__button {
+    font-size: 18px;
+    width: 100%;
+  }
 
   /* ========================================================= */
   .process__heading {
@@ -2590,34 +2603,34 @@
     font-size: 34px;
   }
 
-.subject {
-  flex-direction: column;
-  width: 100%;
-}
+  .subject {
+    flex-direction: column;
+    width: 100%;
+  }
 
-.subject__heading {
-  margin-bottom: 20px;
-}
+  .subject__heading {
+    margin-bottom: 20px;
+  }
 
-.subject__desc {
-  width: 100%;
-}
+  .subject__desc {
+    width: 100%;
+  }
 
-.contract__link {
-  margin-top: 10px;
-}
+  .contract__link {
+    margin-top: 10px;
+  }
 
-.caption__number {
-  font-size: 55px;
-}
+  .caption__number {
+    font-size: 55px;
+  }
 
-.caption__title {
-  font-size: 22px;
-}
+  .caption__title {
+    font-size: 22px;
+  }
 
-.caption__arrow-down {
-  width: 50px;
-}
+  .caption__arrow-down {
+    width: 50px;
+  }
 
 
 }
@@ -2753,12 +2766,12 @@
   }
 
   /* ========================================================= */
-  
+
   .banner__heading .heading__title {
     font-size: 22px;
     line-height: 36px;
   }
-  
+
   .banner__heading .heading__subtitle {
     font-size: 16px;
     line-height: 26px;
@@ -2785,18 +2798,21 @@
 
   /* ========================================================= */
 
+  .process__heading .heading__title {
+    font-size: 24px;
+  }
 
   .caption__number {
     font-size: 50px;
   }
-  
+
   .caption__title {
     font-size: 19px;
     width: 40%;
     line-height: 24px;
     min-width: 0;
   }
-  
+
   .caption__arrow-down {
     width: 50px;
   }
@@ -2805,7 +2821,7 @@
     margin-bottom: 10px;
     font-size: 18px;
   }
-  
+
   .subject__desc {
     font-size: 14px;
   }
