@@ -3,15 +3,14 @@
   // Бургер
 
   document.addEventListener('click', burgerInit)
-
   function burgerInit(e) {
-    e.preventDefault()
+    // e.preventDefault()
     const burger = document.querySelector('.burger')
     const innerHeader = document.querySelector('.header__inner')
     const overlay = document.querySelector('.overlay')
     const burgerIcon = e.target.closest('.burger')
-    const burgerNavLink = e.target.closest('.header__nav-link')
     const burgerLogo = e.target.closest('.header__logo-mobile')
+    const burgerNavLink = e.target.closest('.header__nav-link')
     const burgerSocials = e.target.closest('.header__mob-social-link')
     const burgerDocs = e.target.closest('.header__mob-req-item')
 
@@ -29,6 +28,7 @@
     if (!burger.classList.contains('burger--active')
       && !innerHeader.classList.contains('header__inner--open')
       && !overlay.classList.contains('overlay--show')) {
+    e.preventDefault()
       burger.classList.add('burger--active')
       innerHeader.classList.add('header__inner--open')
       overlay.classList.add('overlay--show')
@@ -170,6 +170,11 @@
     loop: true,
     effect: 'fade',
 
+    pagination: {
+      el: '.compare__dots',
+      clickable: true,
+    },
+
     navigation: {
       nextEl: '.compare__next',
       prevEl: '.compare__prev',
@@ -188,6 +193,26 @@
     loop: true,
     loopedSlides: 3,
 
+    breakpoints: {
+      280: {
+        slidesPerView: 1.2,
+      },
+      500: {
+        slidesPerView: 2,
+      },
+      700: {
+        slidesPerView: 2.5,
+      },
+      950: {
+        slidesPerView: 3,
+      }
+    },
+
+    pagination: {
+      el: '.more__dots',
+      clickable: true,
+    },
+
     navigation: {
       nextEl: '.more__next',
       prevEl: '.more__prev',
@@ -203,6 +228,25 @@
 
     slidesPerView: 3,
     spaceBetween: 30,
+
+    breakpoints: {
+      280: {
+        slidesPerView: 1.2,
+      },
+      460: {
+        slidesPerView: 1.5,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      750: {
+        slidesPerView: 2.2,
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
 
     pagination: {
       el: '.team__dots',
@@ -228,9 +272,32 @@
     loop: true,
     loopedSlides: 3,
 
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
+      },
+      500: {
+        slidesPerView: 1.5,
+      },
+      650: {
+        slidesPerView: 1.6,
+      },
+      850: {
+        slidesPerView: 2,
+      },
+      1100: {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+      1250: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    },
+
     pagination: {
       el: '.team__cl-dots',
-      // clickable: true,
+      clickable: true,
     },
 
     navigation: {

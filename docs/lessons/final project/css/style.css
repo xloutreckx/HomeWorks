@@ -9,6 +9,10 @@
 
 /* =======================<<<GLOBAL>>>======================== */
 /* =======================<<<GLOBAL>>>======================== */
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {}
 
 .no-scroll {
@@ -933,10 +937,13 @@
 .warranty__bottom-block {}
 
 .warranty__bottom-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "long1 long1 long1 little1 little1"
+    "little2 little2 long2 long2 long2";
+  gap: 30px;
 }
 
 .warranty__bot-item {
@@ -946,12 +953,20 @@
   min-height: 270px;
 }
 
-.item__long {
-  max-width: 735px;
+.item__long-1 {
+  grid-area: long1;
 }
 
-.item__little {
-  max-width: 520px;
+.item__long-2 {
+  grid-area: long2;
+}
+
+.item__little-1 {
+  grid-area: little1;
+}
+
+.item__little-2 {
+  grid-area: little2;
 }
 
 .warranty__item-title {
@@ -977,7 +992,15 @@
 .compare__inner {}
 
 .compare__heading {
-  margin-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.compare__heading .heading__subtitle {
+  max-width: 600px;
+  margin-top: 20px;
 }
 
 .compare__slider-wrapper {
@@ -998,7 +1021,7 @@
   display: flex;
   position: relative;
   justify-content: center;
-  padding-bottom: 100px;
+  padding: 0 20px 100px;
 }
 
 .compare__slide-inner p {
@@ -1031,7 +1054,7 @@
 }
 
 .compare__col-cont:hover {
-  box-shadow: 0px 0px 34px 7px rgba(227, 81, 81, 0.35);
+  box-shadow: 0px 0px 20px 7px rgba(227, 81, 81, 0.35);
 }
 
 .compare__col-inner {}
@@ -1130,6 +1153,10 @@
   bottom: 0;
 }
 
+.compare__dots {
+  display: none;
+}
+
 .compare__foot {
   display: flex;
   align-items: center;
@@ -1140,8 +1167,8 @@
 .compare__block {
   background-color: #fff;
   border-radius: 20px;
-  padding: 50px 80px;
-  max-height: 515px;
+  padding: 50px 60px;
+  min-height: 515px;
   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.48);
 }
 
@@ -1282,6 +1309,14 @@
   object-fit: cover;
 }
 
+.more__dots {
+  display: none;
+}
+
+.more__button--mobile {
+  display: none;
+}
+
 /* =======================<<<TEAM>>>======================== */
 /* =======================<<<TEAM>>>======================== */
 
@@ -1389,7 +1424,7 @@
 .team__cl-slider {}
 
 .team__cl-slider-wrapper {
-  padding: 100px 0;
+  padding: 20px 0 60px;
 }
 
 .team__cl-slider .swiper-button-prev,
@@ -1511,6 +1546,7 @@
 .calculate__inner {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .calculate__form-block {
@@ -1584,10 +1620,7 @@
 
 .calculate__checkbox-custom {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   border: 1px solid #000;
   border-radius: 3px;
   cursor: pointer;
@@ -1656,15 +1689,18 @@
   font-size: 20px;
   line-height: 28px;
   max-width: 535px;
-  margin-bottom: 24px;
   padding-left: 51px;
   position: relative;
+}
+
+.calculate__item:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 .calculate__item::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 20%;
   left: 0;
   width: 36px;
   height: 36px;
@@ -1686,17 +1722,12 @@
 
 .contact__row {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 40px;
-  max-width: 1050px;
-}
-
-.row__slim {
-  max-width: 580px;
+  gap: 150px;
 }
 
 .contact__row-item {
-  max-width: 270px;
+  width: 270px;
 }
 
 .contact__item-title {
@@ -1813,6 +1844,22 @@
   .banner__inner {
     align-items: center;
   }
+
+  /* ============================================= */
+
+  .compare__heading-foot .heading__title {
+    font-size: 40px;
+  }
+
+  .compare__block-list {
+    margin-top: 30px;
+  }
+
+  /* ============================================= */
+
+  .contact__row {
+    gap: 120px;
+  }
 }
 
 /* =======================<<<1100>>>======================== */
@@ -1927,8 +1974,52 @@
   .banner__heading .heading__subtitle {
     font-size: 20px;
   }
+
+  /* ============================================= */
+
+  .warranty__contract p {
+    font-size: 20px;
+  }
+
+  /* ============================================= */
+
+  .compare__block {
+    padding: 40px;
+  }
+
+  .compare__heading-foot .heading__title {
+    font-size: 36px;
+  }
+
+  .compare__block-list li {
+    font-size: 16px;
+  }
+
+  /* ============================================= */
+
+  .more__heading .heading__title {
+    font-size: 36px;
+  }
+
+  .more__heading .heading__subtitle {
+    font-size: 18px;
+  }
+
+  /* ============================================= */
+  
+  .questions__acc-control {
+    font-size: 1.3em;
+  }
+
+  /* ============================================= */
+
+  .contact__row {
+    gap: 45px;
+}
 }
 
+/* =======================<<<950>>>======================== */
+/* =======================<<<950>>>======================== */
 /* =======================<<<950>>>======================== */
 
 @media (max-width: 950px) {
@@ -2145,7 +2236,14 @@
   .main__services,
   .main__banner,
   .main__review,
-  .main__process {
+  .main__process,
+  .main__warranty,
+  .main__compare,
+  .main__more,
+  .main__team,
+  .main__questions,
+  .main__calculate,
+  .main__contact {
     padding: 64px 0;
   }
 
@@ -2384,9 +2482,233 @@
   .warranty__top-text {
     font-size: 20px;
     max-width: 215px;
-}
+  }
+
+  .warranty__contract p {
+    font-size: 16px;
+    max-width: 370px;
+  }
+
+  .warranty__contract a {
+    font-size: 18px;
+    min-width: 275px;
+  }
+
+  .warranty__top-block {
+    margin-bottom: 50px;
+  }
+
+  .warranty__bottom-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "long1"
+      "little1"
+      "little2"
+      "long2";
+    gap: 30px;
+  }
+
+  .warranty__bot-item {
+    min-height: 0;
+  }
+
+  /* ========================================================= */
+
+  .compare__heading .heading__title {
+    font-size: 40px;
+  }
+
+  .compare__slide-inner p {
+    font-size: 40px;
+    margin: 0 15px;
+  }
+
+  .compare__col-title,
+  .compare__image-box,
+  .compare__title {
+    margin-bottom: 10px;
+  }
+
+  .compare__title {
+    font-size: 20px;
+  }
+
+  .compare__name {
+    font-size: 14px;
+  }
+
+  .compare__value {
+    font-size: 18px;
+  }
+
+  .compare__price-row {
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px 0;
+  }
+
+  .compare__text-name {
+    font-size: 13.5px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .compare__foot {
+    flex-direction: column;
+    gap: 24px 0;
+    padding-top: 50px;
+  }
+
+  .compare__block {
+    padding: 40px 60px;
+  }
+
+  /* ========================================================= */
+
+  .more__head {
+    flex-direction: column;
+  }
+
+  .more__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px;
+  }
+
+  .more__heading .heading__title,
+  .more__heading .heading__subtitle {
+    text-align: center;
+  }
+
+  /* ========================================================= */
+
+  .questions__acc-control {
+    padding: 1.5% 2%;
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .questions__acc-control p {
+    max-width: 85%;
+  }
+
+  .questions__acc-content {
+    font-size: 16px;
+  }
+
+  /* ========================================================= */
+
+  .calculate__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .calculate__content {
+    max-width: 460px;
+  }
+
+  /* ========================================================= */
+
+  .contact__heading,
+  .contact__row {
+    text-align: center;
+  }
+
+  .contact__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__list-social,
+  .contact__req-row {
+    justify-content: space-evenly;
+  }
+
+  .contact__item-social,
+  .contact__req-item {
+    margin: 0;
+  }
+  
 }
 
+/* =======================<<<700>>>======================== */
+/* =======================<<<700>>>======================== */
+/* =======================<<<700>>>======================== */
+
+@media (max-width: 700px) {
+  .compare__slide-inner {
+    flex-direction: column;
+    padding: 0 100px 10px;
+  }
+
+  .compare__slide-inner p,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .compare__slide-button {
+    position: static;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .compare__dots {
+    display: block;
+  }
+
+  /* ========================================================= */
+
+  .more__slider-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .more__dots {
+    display: block;
+  }
+
+  /* ========================================================= */
+
+  .team__content {
+    padding: 15px;
+  }
+
+  .team__name {
+    font-size: 18px;
+    line-height: 0;
+  }
+
+  .team__position,
+  .team__phone {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .team__socials {
+    margin-top: 10px;
+  }
+
+  /* ========================================================= */
+
+  .questions__acc-control {
+    font-size: 1.1em;
+  }
+
+  .questions__acc-control p {
+    max-width: 85%;
+  }
+
+  .questions__acc-content {
+    font-size: 16px;
+  }
+}
+
+/* =======================<<<600>>>======================== */
+/* =======================<<<600>>>======================== */
 /* =======================<<<600>>>======================== */
 
 @media (max-width: 600px) {
@@ -2595,6 +2917,7 @@
   }
 
   /* ========================================================= */
+
   .process__heading {
     margin-bottom: 20px;
   }
@@ -2632,9 +2955,166 @@
     width: 50px;
   }
 
+  /* ========================================================= */
 
+  .warranty__heading .heading__title {
+    font-size: 34px;
+  }
+
+  .warranty__top-item {
+    width: 90%;
+  }
+
+  .warranty__top-text {
+    max-width: 340px;
+  }
+
+  .warranty__contract {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .warranty__contract p {
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .warranty__contract a {
+    padding-left: 20px;
+    min-width: 300px;
+  }
+
+  .warranty__bot-item {
+    padding: 30px;
+  }
+
+  .warranty__item-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .warranty__item-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /* ========================================================= */
+
+  .compare__heading .heading__title {
+    font-size: 34px;
+  }
+
+  .compare__heading .heading__subtitle {
+    font-size: 20px;
+  }
+
+  .compare__slide-inner {
+    padding: 0 50px 10px;
+  }
+
+  .compare__block {
+    padding: 35px;
+  }
+
+  /* ========================================================= */
+
+  .more__text-content {
+    margin: 0;
+  }
+
+  .more__heading .heading__title,
+  .more__heading .heading__subtitle {
+    text-align: left;
+  }
+
+  .more__heading .heading__subtitle {
+    font-size: 16px;
+  }
+
+  .more__button {
+    display: none;
+  }
+
+  .more__button--mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .team__heading .heading__title {
+    font-size: 36px;
+  }
+
+  .team__heading .heading__subtitle {
+    font-size: 20px;
+  }
+
+  .team__cl-video-desc {
+    font-size: 0.6em;
+  }
+
+  .team__inner-down {
+    padding-top: 50px;
+  }
+
+  /* ========================================================= */
+
+  .questions__heading {
+    margin-bottom: 20px;
+  }
+
+  .questions__heading .heading__title {
+    font-size: 36px;
+  }
+
+  .questions__acc-control p {
+    max-width: 80%;
+  }
+
+  .questions__acc-content {
+    font-size: 14px;
+    max-width: 80%;
+    line-height: 24px;
+  }
+
+  /* ========================================================= */
+
+  .calculate__heading .heading__title {
+    font-size: 30px;
+    max-width: 75%;
+    line-height: 44px;
+  }
+
+  .calculate__content {
+    max-width: 460px;
+  }
+
+  .calculate__item {
+    font-size: 18px;
+  }
+
+  /* ========================================================= */
+
+.contact__heading {
+  margin-bottom: 25px;
 }
 
+.contact__heading .heading__title {
+  font-size: 36px;
+}
+
+.contact__req-row {
+  flex-direction: column-reverse;
+  max-width: 100%;
+  align-items: center;
+  min-height: 100px;
+}
+  
+}
+
+/* =======================<<<460>>>======================== */
+/* =======================<<<460>>>======================== */
 /* =======================<<<460>>>======================== */
 
 @media (max-width: 460px) {
@@ -2829,4 +3309,280 @@
   .contract__link {
     max-width: 220px;
   }
+
+  /* ========================================================= */
+
+  .warranty__heading {
+    margin-bottom: 20px;
+  }
+
+  .warranty__heading .heading__title {
+    font-size: 24px;
+  }
+
+  .warranty__top-item {
+    padding: 20px;
+    min-height: 100px;
+  }
+
+  .warranty__top-image svg {
+    width: 45px;
+  }
+
+  .warranty__top-text {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .item--ind-height {
+    padding: 10px 20px;
+  }
+
+  .warranty__contract p {
+    font-size: 12px;
+  }
+
+  .warranty__contract a {
+    font-size: 14px;
+    min-width: 240px;
+  }
+
+  .warranty__bot-item {
+    padding: 25px;
+  }
+
+  .warranty__item-title {
+    font-size: 18px;
+  }
+
+  .warranty__item-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* ========================================================= */
+
+  .compare__heading {
+    margin-bottom: 20px;
+  }
+
+  .compare__heading .heading__title {
+    font-size: 24px;
+  }
+
+  .compare__heading .heading__subtitle {
+    font-size: 16px;
+  }
+
+  .compare__slide-inner {
+    padding: 0 10px 10px;
+  }
+
+  .compare__col-cont:hover {
+    box-shadow: 0px 0px 8px 7px rgba(227, 81, 81, 0.15);
+  }
+
+  .compare__text-name {
+    font-size: 13px;
+  }
+
+  .compare__block {
+    padding: 35px 25px;
+    min-height: 0;
+  }
+
+  .compare__heading-foot .heading__title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .compare__heading-foot .heading__subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 26px;
+  }
+
+  .compare__block-list {
+    margin-top: 20px;
+  }
+
+  .compare__block-list li {
+    font-size: 12px;
+  }
+
+  .compare__us-timeframe, .compare__ru-timeframe {
+    font-size: 16px;
+  }
+
+  .compare__us-timeframe span {
+    font-size: 36px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+
+  .compare__block-button {
+    font-size: 16px;
+  }
+
+  /* ========================================================= */
+
+  .more__heading .heading__title {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .more__heading .heading__subtitle {
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+
+  .more__helped {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 15px;
+  }
+
+  .more__helped span {
+    display: block;
+    font-size: 30px;
+  }
+
+  /* ========================================================= */
+
+  .team__heading {
+    margin-bottom: 20px;
+  }
+
+  .team__heading .heading__title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .team__heading .heading__subtitle {
+    font-size: 16px;
+  }
+
+  .team__content {
+    padding: 5px 15px;
+  }
+
+  .team__name {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+  }
+
+  .team__position, .team__phone {
+    font-size: 12px;
+    margin: 0;
+    line-height: 16px;
+  }
+
+  /* ========================================================= */
+
+  .questions__heading .heading__title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .questions__acc-control {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4% 2%;
+  }
+
+  .questions__acc-control p {
+    max-width: 70%;
+  }
+
+  .questions__acc-icon circle {
+    r: 26px;
+  }
+
+  .questions__acc-icon path {
+    stroke-width: 3;
+  }
+
+  .questions__acc-content {
+    font-size: 12px;
+    max-width: 70%;
+    line-height: 20px;
+  }
+
+  /* ========================================================= */
+
+  .calculate__content {
+    padding: 24px;
+  }
+
+  .calculate__heading {
+    margin-bottom: 25px;
+  }
+
+  .calculate__heading .heading__title {
+    font-size: 22px;
+    max-width: 85%;
+    line-height: 36px;
+  }
+
+  .calculate__form-block {
+    padding: 40px 20px;
+  }
+
+  .calculate__item {
+    font-size: 14px;
+  }
+
+  .calculate__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .calculate__form-input::placeholder,
+  .calculate__form-btn,
+  .calculate__form-input {
+    font-size: 14px;
+  }
+
+  .calculate__social-title {
+    font-size: 18px;
+  }
+
+  .calculate__social-item {
+    font-size: 14px;
+    padding: 8px 8px 8px 44px;
+  }
+
+  /* ========================================================= */
+
+  .contact__heading,
+  .contact__row {
+    text-align: left;
+  }
+
+  .contact__heading .heading__title {
+    font-size: 24px;
+}
+
+.contact__item-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact__item-desc {
+  font-size: 18px;
+}
+
+.contact__row {
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.contact__list-social {
+  justify-content: start;
+}
+
+.contact__item-social {
+  margin-right: 12px;
+}
 }
